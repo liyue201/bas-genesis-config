@@ -1,10 +1,10 @@
-use ethereum_types::{H160, U256};
+use ethereum_types::{H160, H256, U256};
 use once_cell::sync::Lazy;
 use rust_embed::RustEmbed;
 use serde::{Deserialize, Serialize};
-use serde_json::Result;
 use std::collections::HashMap;
 use std::str::FromStr;
+use anyhow::{Result, anyhow};
 
 static STAKING_ADDRESS: Lazy<H160> =
     Lazy::new(|| H160::from_str("0x0000000000000000000000000000000000001000").unwrap());
@@ -33,6 +33,117 @@ struct artifact_data {
 #[derive(RustEmbed)]
 #[folder = "build/contracts"]
 struct Asset;
+
+
+#[derive(Serialize, Deserialize)]
+struct ParliaConfig {
+    period: u64,
+    epoch: u64,
+}
+
+#[derive(Serialize, Deserialize)]
+struct ChainConfig {
+    chain_id: U256,
+
+    homestead_block: Option<U256>,
+
+    eip150_block: Option<U256>,
+    eip150_hash: Option<U256>,
+    eip155_block: Option<U256>,
+    eip158_block: Option<U256>,
+
+    byzantium_block: Option<U256>,
+    constantinople_block: Option<U256>,
+    petersburg_block: Option<U256>,
+    istanbul_block: Option<U256>,
+    muir_glacier_block: Option<U256>,
+    berlin_block: Option<U256>,
+    runtime_upgrade_block: Option<U256>,
+    deployer_proxy_block: Option<U256>,
+
+    yolo_v3_block: Option<U256>,
+
+    ewasm_block: Option<U256>,
+    catalyst_block: Option<U256>,
+
+    ramanujan_block: Option<U256>,
+    niels_block: Option<U256>,
+
+    mirror_sync_block: Option<U256>,
+
+    bruno_block: Option<U256>,
+
+    // Various consensus engines
+    //Clique * CliqueConfig `json:"clique,omitempty" toml:",omitempty"`
+    parlia: Option<ParliaConfig>,
+}
+
+#[derive(Serialize, Deserialize)]
+struct GenesisAccount {
+    code: Vec<u8>,
+    storage: HashMap<H160, H256>,
+    balance: Option<H256>,
+    nonce: u64,
+    privateKey: Vec<u8>,
+}
+
+#[derive(Serialize, Deserialize)]
+struct Genesis {
+    config: ChainConfig,
+    nonce: u64,
+    timestamp: u64,
+    extra_data: Vec<u8>,
+    gas_limit: u64,
+    difficulty: U256,
+    mix_hash: U256,
+    coinbase: H160,
+    alloc: HashMap<H160, GenesisAccount>,
+    number: u64,
+    gas_used: u64,
+    parent_hash: H256,
+}
+
+impl Genesis {
+    pub fn default() -> Self {
+        Genesis {
+            config: ChainConfig {
+                chain_id: Default::default(),
+                homestead_block: None,
+                eip150_block: None,
+                eip150_hash: None,
+                eip155_block: None,
+                eip158_block: None,
+                byzantium_block: None,
+                constantinople_block: None,
+                petersburg_block: None,
+                istanbul_block: None,
+                muir_glacier_block: None,
+                berlin_block: None,
+                runtime_upgrade_block: None,
+                deployer_proxy_block: None,
+                yolo_v3_block: None,
+                ewasm_block: None,
+                catalyst_block: None,
+                ramanujan_block: None,
+                niels_block: None,
+                mirror_sync_block: None,
+                bruno_block: None,
+                parlia: None,
+            },
+            nonce: 0,
+            timestamp: 0,
+            extra_data: vec![],
+            gas_limit: 0,
+            difficulty: Default::default(),
+            mix_hash: Default::default(),
+            coinbase: Default::default(),
+            alloc: Default::default(),
+            number: 0,
+            gas_used: 0,
+            parent_hash: Default::default(),
+        }
+    }
+}
 
 #[derive(Serialize, Deserialize)]
 struct ConsensusParams {
@@ -129,6 +240,10 @@ static DEV_NET: Lazy<GenesisConfig> = Lazy::new(|| GenesisConfig {
         ),
     ]),
 });
+
+fn create_genesis_config(cfg: GenesisConfig, filename: &str) -> Result<()> {
+    Ok(())
+}
 
 fn main() {
     //H160::from_str("0x0000000000000000000000000000000000001000");
