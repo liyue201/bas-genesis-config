@@ -1,9 +1,9 @@
 const Web3 = require('web3'),
   fs = require('fs');
 
-const ABI_STAKING = require('./build/abi/Staking.json');
-const ABI_GOVERNANCE = require('./build/abi/Governance.json');
-const ABI_RUNTIME_UPGRADE = require('./build/abi/RuntimeUpgrade.json');
+const ABI_STAKING = require('./gen/build/abi/Staking.json');
+const ABI_GOVERNANCE = require('./gen/build/abi/Governance.json');
+const ABI_RUNTIME_UPGRADE = require('./gen/build/abi/RuntimeUpgrade.json');
 
 const askFor = async (question) => {
   return new Promise(resolve => {

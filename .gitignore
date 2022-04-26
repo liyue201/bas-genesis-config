@@ -1,6 +1,7 @@
 .idea/
 .openzeppelin/
-build/
+gen/build/
+gen/target/
 artifacts/
 cache/
 node_modules/
