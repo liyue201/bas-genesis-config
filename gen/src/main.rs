@@ -63,27 +63,6 @@ impl Asset {
     }
 }
 
-// #[derive(RustEmbed)]
-// #[folder = "build/abi"]
-// struct ABI;
-//
-// impl ABI {
-//     fn staking_contract() -> Contract {
-//         Self::contract("Strings.json")
-//     }
-//
-//     fn contract(filename: &str) -> Contract {
-//         let data: std::borrow::Cow<'static, [u8]> = Asset::get(filename).unwrap();
-//
-//         let data: &[u8] = data.as_ref();
-//
-//         let str: String = String::from_utf8(data.to_vec()).unwrap();
-//         println!("str = {}", str);
-//
-//         ethabi::Contract::load(data).unwrap()
-//     }
-// }
-
 
 #[derive(Serialize, Deserialize)]
 struct ParliaConfig {
@@ -304,11 +283,16 @@ fn invoke_constructor(genesis: Genesis, contract_address: H160, artifact: Artifa
     //println!("artifact: {:?}", artifact);
 
     let ctor = contract.functions.get("ctor").unwrap();
-    let sig = ctor[0].short_signature();
 
-    println!("sig: {:?}", sig);
+    let ctor = ctor[0].encode_input(inputs)?;
 
-    ctor[0].encode_input(inputs)?;
+   // println!("ctor: {:?}", hex::encode(ctor.clone()));
+
+    let constr = contract.constructor().unwrap();
+    let ctor = constr.encode_input(vec![], vec![Token::Bytes(ctor)].as_slice())?;
+
+    //println!("ctor: {:?}", hex::encode(ctor));
+
     Ok(())
 }
 
@@ -345,8 +329,14 @@ fn create_genesis_config(cfg: GenesisConfig, filename: &str) -> Result<()> {
     //     uint16(config.CommissionRate),
     // }, silent)
 
+    let validators = validators_to_tokens(cfg.validators);
+    let mut stakes = vec![];
+    for stake in initial_stakes {
+        stakes.push(Token::Uint(stake.clone()));
+    }
+    let inputs = vec![Token::Array(validators), Token::Array(stakes), Token::Uint(cfg.commission_rate.into())];
     invoke_constructor(genesis, STAKING_ADDRESS.clone(), Asset::staking_artifact(),
-                       Asset::staking_contract(), validators_to_tokens(cfg.validators).as_slice());
+                       Asset::staking_contract(), inputs.as_slice());
 
     //Token::Uint(uint.into()
     Ok(())
