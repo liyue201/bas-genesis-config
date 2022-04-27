@@ -3,8 +3,10 @@ use once_cell::sync::Lazy;
 use rust_embed::RustEmbed;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
+use std::ops::Add;
 use std::str::FromStr;
 use anyhow::{Result, anyhow};
+use ethabi::{Function, Param, ParamType, Contract, Token};
 
 static STAKING_ADDRESS: Lazy<H160> =
     Lazy::new(|| H160::from_str("0x0000000000000000000000000000000000001000").unwrap());
@@ -25,14 +27,62 @@ static DEPLOYER_PROXY_ADDRESS: Lazy<H160> =
 static INTERMEDIARY_SYSTEM_ADDRESS: Lazy<H160> =
     Lazy::new(|| H160::from_str("0xfffffffffffffffffffffffffffffffffffffffe").unwrap());
 
-struct artifact_data {
+#[derive(Debug, Serialize, Deserialize)]
+struct ArtifactData {
+    #[serde(alias = "bytecode")]
     byte_code: String,
+    #[serde(alias = "deployedBytecode")]
     deployed_byte_code: String,
 }
 
 #[derive(RustEmbed)]
-#[folder = "build/contracts"]
+#[folder = "build/"]
 struct Asset;
+
+impl Asset {
+    fn staking_artifact() -> ArtifactData {
+        Self::artifact("contracts/Staking.json")
+    }
+    fn artifact(filename: &str) -> ArtifactData {
+        let data: std::borrow::Cow<'static, [u8]> = Asset::get(filename).unwrap();
+        serde_json::from_slice(data.as_ref().into()).unwrap()
+    }
+
+    fn staking_contract() -> Contract {
+        Self::contract("abi/Staking.json")
+    }
+
+    fn contract(filename: &str) -> Contract {
+        let data: std::borrow::Cow<'static, [u8]> = Asset::get(filename).unwrap();
+        let data: &[u8] = data.as_ref();
+
+        //let str: String = String::from_utf8(data.to_vec()).unwrap();
+        //println!("str = {}", str);
+
+        ethabi::Contract::load(data).unwrap()
+    }
+}
+
+// #[derive(RustEmbed)]
+// #[folder = "build/abi"]
+// struct ABI;
+//
+// impl ABI {
+//     fn staking_contract() -> Contract {
+//         Self::contract("Strings.json")
+//     }
+//
+//     fn contract(filename: &str) -> Contract {
+//         let data: std::borrow::Cow<'static, [u8]> = Asset::get(filename).unwrap();
+//
+//         let data: &[u8] = data.as_ref();
+//
+//         let str: String = String::from_utf8(data.to_vec()).unwrap();
+//         println!("str = {}", str);
+//
+//         ethabi::Contract::load(data).unwrap()
+//     }
+// }
 
 
 #[derive(Serialize, Deserialize)]
@@ -43,7 +93,7 @@ struct ParliaConfig {
 
 #[derive(Serialize, Deserialize)]
 struct ChainConfig {
-    chain_id: U256,
+    chain_id: i64,
 
     homestead_block: Option<U256>,
 
@@ -128,13 +178,16 @@ impl Genesis {
                 niels_block: None,
                 mirror_sync_block: None,
                 bruno_block: None,
-                parlia: None,
+                parlia: Some(ParliaConfig {
+                    period: 3,
+                    epoch: 0,
+                }),
             },
             nonce: 0,
-            timestamp: 0,
+            timestamp: 0x5e9da7ce,
             extra_data: vec![],
-            gas_limit: 0,
-            difficulty: Default::default(),
+            gas_limit: 0x2625a00,
+            difficulty: 1u32.into(),
             mix_hash: Default::default(),
             coinbase: Default::default(),
             alloc: Default::default(),
@@ -145,12 +198,12 @@ impl Genesis {
     }
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Clone, Serialize, Deserialize)]
 struct ConsensusParams {
     #[serde(alias = "activeValidatorsLength")]
     active_validators_length: u32,
     #[serde(alias = "epochBlockInterval")]
-    epoch_block_interval: u32,
+    epoch_block_interval: u64,
     #[serde(alias = "misdemeanorThreshold")]
     misdemeanor_threshold: u32,
     #[serde(alias = "felonyThreshold")]
@@ -165,7 +218,7 @@ struct ConsensusParams {
     min_staking_amount: U256,
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Clone, Serialize, Deserialize)]
 struct GenesisConfig {
     #[serde(alias = "chainId")]
     chain_id: i64,
@@ -181,7 +234,7 @@ struct GenesisConfig {
     #[serde(alias = "commissionRate")]
     commission_rate: i64,
     #[serde(alias = "initialStakes")]
-    initial_stakes: HashMap<H160, String>,
+    initial_stakes: HashMap<H160, U256>,
 }
 
 static DEV_NET: Lazy<GenesisConfig> = Lazy::new(|| GenesisConfig {
@@ -209,39 +262,93 @@ static DEV_NET: Lazy<GenesisConfig> = Lazy::new(|| GenesisConfig {
     faucet: HashMap::from([
         (
             H160::from_str("0x00a601f45688dba8a070722073b015277cf36725").unwrap(),
-            "0x21e19e0c9bab2400000".to_owned(),
+            "0x21e19e0c9bab2400000".into(),
         ),
         (
             H160::from_str("0xb891fe7b38f857f53a7b5529204c58d5c487280b").unwrap(),
-            "0x52b7d2dcc80cd2e4000000".to_owned(),
+            "0x52b7d2dcc80cd2e4000000".into(),
         ),
     ]),
     commission_rate: 0,
     initial_stakes: HashMap::from([
         (
             H160::from_str("0x08fae3885e299c24ff9841478eb946f41023ac69").unwrap(),
-            "0x3635c9adc5dea00000".to_owned(),
+            "0x3635c9adc5dea00000".into(),
         ),
         (
             H160::from_str("0x751aaca849b09a3e347bbfe125cf18423cc24b40").unwrap(),
-            "0x3635c9adc5dea00000".to_owned(),
+            "0x3635c9adc5dea00000".into(),
         ),
         (
             H160::from_str("0xa6ff33e3250cc765052ac9d7f7dfebda183c4b9b").unwrap(),
-            "0x3635c9adc5dea00000".to_owned(),
+            "0x3635c9adc5dea00000".into(),
         ),
         (
             H160::from_str("0x49c0f7c8c11a4c80dc6449efe1010bb166818da8").unwrap(),
-            "0x3635c9adc5dea00000".to_owned(),
+            "0x3635c9adc5dea00000".into(),
         ),
         (
             H160::from_str("0x8e1ea6eaa09c3b40f4a51fcd056a031870a0549a").unwrap(),
-            "0x3635c9adc5dea00000".to_owned(),
+            "0x3635c9adc5dea00000".into(),
         ),
     ]),
 });
 
+
+fn create_extra_data(validators: Vec<H160>) -> Vec<u8> {
+    //todo:
+    return vec![];
+}
+
+fn invoke_constructor(genesis: Genesis, contract_address: H160, artifact: ArtifactData, contract: Contract, inputs: &[Token]) -> Result<()> {
+    //println!("artifact: {:?}", artifact);
+
+    let ctor = contract.functions.get("ctor").unwrap();
+    let sig = ctor[0].short_signature();
+
+    println!("sig: {:?}", sig);
+
+    ctor[0].encode_input(inputs)?;
+    Ok(())
+}
+
+fn validators_to_tokens(validators: Vec<H160>) -> Vec<Token> {
+    let mut tokens = vec![];
+    for &v in &validators {
+        tokens.push(Token::Address(v));
+    }
+    tokens
+}
+
 fn create_genesis_config(cfg: GenesisConfig, filename: &str) -> Result<()> {
+    let mut genesis = Genesis::default();
+    genesis.config.chain_id = cfg.chain_id;
+    genesis.extra_data = create_extra_data(cfg.validators.clone());
+    genesis.config.parlia = Some(ParliaConfig { epoch: cfg.consensus_params.epoch_block_interval, period: 3 });
+
+    let mut initial_stakes = vec![];
+    let mut initial_stake_total: U256 = 0u32.into();
+
+    for &v in &cfg.validators {
+        let stake = cfg.initial_stakes.get(&v);
+        if stake.is_some() {
+            let stake = stake.unwrap();
+            initial_stakes.push(stake);
+            initial_stake_total = initial_stake_total.add(stake);
+        }
+    }
+    println!("initial_stakes = {:?}", initial_stakes);
+    println!("initial_stake_total = {:?}", initial_stake_total);
+    // invokeConstructorOrPanic(genesis, stakingAddress, stakingRawArtifact, []string{"address[]", "uint256[]", "uint16"}, []interface{}{
+    //     config.Validators,
+    //     initialStakes,
+    //     uint16(config.CommissionRate),
+    // }, silent)
+
+    invoke_constructor(genesis, STAKING_ADDRESS.clone(), Asset::staking_artifact(),
+                       Asset::staking_contract(), validators_to_tokens(cfg.validators).as_slice());
+
+    //Token::Uint(uint.into()
     Ok(())
 }
 
@@ -249,5 +356,6 @@ fn main() {
     //H160::from_str("0x0000000000000000000000000000000000001000");
     //let index_html = Asset::get("Staking.json").unwrap();
     //println!("{:?}", std::str::from_utf8(index_html.as_ref()));
+    create_genesis_config(DEV_NET.clone(), "devnet.json");
     println!("Hello, world!");
 }
