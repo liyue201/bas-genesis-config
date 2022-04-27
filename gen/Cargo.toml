@@ -7,12 +7,17 @@ edition = "2021"
 
 [dependencies]
 once_cell = "1.10.0"
-evm = { version = "0.35.0", default-features = false, features = ["with-serde"] }
+#evm = { version = "0.35.0", default-features = false, features = ["with-serde"] }
+evm = { git = "https://github.com/liyue201/evm", rev = "3e739c82cdada8108d145841759964e39af1d279", default-features = false, features = ["with-serde"] }
 ethereum = { version = "0.12.0", default-features = false, features = ["with-serde"] }
 ethereum-types = "0.13.1"
+primitive-types = "0.11"
 web3 = "0.17.0"
 ethabi = "17.0.0"
-
+#eth-utils = { git = "https://github.com/haxjump/eth-utils", rev = "7fc474e57f5dd9c77ce2a9b3ac3104fe8cf63149", features = ["with_common_precompiles"] }
+ethjson = { path = "../ethjson", features = ["test-helpers"] }
+ethcore-builtin = { path = "../ethcore-builtin" }
+lazy_static = "1.4.0"
 sha3 = { version = "0.10", default-features = false }
 rlp = { version = "0.5", default-features = false }
 scale-info = { version = "2.0.0", default-features = false, features = ["derive"], optional = true }

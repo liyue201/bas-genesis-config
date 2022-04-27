@@ -1,3 +1,6 @@
+mod precompile;
+
+use ethjson::spec::ForkSpec;
 use ethereum_types::{H160, H256, U256};
 use once_cell::sync::Lazy;
 use rust_embed::RustEmbed;
@@ -5,8 +8,16 @@ use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use std::ops::Add;
 use std::str::FromStr;
+use std::collections::BTreeMap;
 use anyhow::{Result, anyhow};
 use ethabi::{Function, Param, ParamType, Contract, Token};
+use ethjson::spec::spec::ForkSpec::Istanbul;
+use evm::backend::{ApplyBackend, MemoryAccount, MemoryBackend, MemoryVicinity};
+use evm::executor::stack::{
+    MemoryStackState, PrecompileFailure, PrecompileFn, PrecompileOutput, StackExecutor,
+    StackSubstateMetadata,
+};
+use evm::{Config, Context, ExitError, ExitSucceed};
 
 static STAKING_ADDRESS: Lazy<H160> =
     Lazy::new(|| H160::from_str("0x0000000000000000000000000000000000001000").unwrap());
@@ -72,7 +83,7 @@ struct ParliaConfig {
 
 #[derive(Serialize, Deserialize)]
 struct ChainConfig {
-    chain_id: i64,
+    chain_id: U256,
 
     homestead_block: Option<U256>,
 
@@ -136,7 +147,7 @@ impl Genesis {
     pub fn default() -> Self {
         Genesis {
             config: ChainConfig {
-                chain_id: Default::default(),
+                chain_id: 100u32.into(),
                 homestead_block: None,
                 eip150_block: None,
                 eip150_hash: None,
@@ -200,7 +211,7 @@ struct ConsensusParams {
 #[derive(Clone, Serialize, Deserialize)]
 struct GenesisConfig {
     #[serde(alias = "chainId")]
-    chain_id: i64,
+    chain_id: U256,
     deployers: Vec<H160>,
     validators: Vec<H160>,
     #[serde(alias = "systemTreasury")]
@@ -217,7 +228,7 @@ struct GenesisConfig {
 }
 
 static DEV_NET: Lazy<GenesisConfig> = Lazy::new(|| GenesisConfig {
-    chain_id: 14000,
+    chain_id: 14000u32.into(),
     deployers: vec![],
     validators: vec![
         H160::from_str("0x08fae3885e299c24ff9841478eb946f41023ac69").unwrap(),
@@ -286,12 +297,54 @@ fn invoke_constructor(genesis: Genesis, contract_address: H160, artifact: Artifa
 
     let ctor = ctor[0].encode_input(inputs)?;
 
-   // println!("ctor: {:?}", hex::encode(ctor.clone()));
+    // println!("ctor: {:?}", hex::encode(ctor.clone()));
 
     let constr = contract.constructor().unwrap();
     let ctor = constr.encode_input(vec![], vec![Token::Bytes(ctor)].as_slice())?;
 
     //println!("ctor: {:?}", hex::encode(ctor));
+
+    simulate_system_contract(genesis, contract_address, artifact, ctor)?;
+
+    Ok(())
+}
+
+fn simulate_system_contract(genesis: Genesis, contract_address: H160, artifact: ArtifactData, constructor: Vec<u8>) -> Result<()> {
+    let state = BTreeMap::new();
+    let vicinity = MemoryVicinity {
+        gas_price: Default::default(),
+        origin: Default::default(),
+        chain_id: genesis.config.chain_id,
+        block_hashes: vec![],
+        block_number: Default::default(),
+        block_coinbase: Default::default(),
+        block_timestamp: Default::default(),
+        block_difficulty: Default::default(),
+        block_gas_limit: U256::MAX,
+        block_base_fee_per_gas: Default::default(),
+    };
+    let mut backend = MemoryBackend::new(&vicinity, state.clone());
+
+    let mut evm_cfg = Config::istanbul();
+    let metadata =
+        StackSubstateMetadata::new(u64::MAX, &evm_cfg);
+
+
+    let executor_state = MemoryStackState::new(metadata, &backend);
+    let precompile = precompile::JsonPrecompile::precompile(&Istanbul).unwrap();
+
+    let mut executor = StackExecutor::new_with_precompiles(
+        executor_state,
+        &evm_cfg,
+        &precompile,
+    );
+
+    let reason = executor.transact_create_with_address(H160::zero(),
+                                                        contract_address, U256::zero(),
+                                                        artifact.byte_code.into_bytes(),
+                                                        u64::MAX,
+                                                        vec![]);
+    println!("_reason: {:?}", reason);
 
     Ok(())
 }
@@ -323,6 +376,7 @@ fn create_genesis_config(cfg: GenesisConfig, filename: &str) -> Result<()> {
     }
     println!("initial_stakes = {:?}", initial_stakes);
     println!("initial_stake_total = {:?}", initial_stake_total);
+
     // invokeConstructorOrPanic(genesis, stakingAddress, stakingRawArtifact, []string{"address[]", "uint256[]", "uint16"}, []interface{}{
     //     config.Validators,
     //     initialStakes,
