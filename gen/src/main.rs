@@ -12,7 +12,7 @@ use std::collections::BTreeMap;
 use anyhow::{Result, anyhow};
 use ethabi::{Function, Param, ParamType, Contract, Token};
 use ethjson::spec::spec::ForkSpec::Istanbul;
-use evm::backend::{ApplyBackend, MemoryAccount, MemoryBackend, MemoryVicinity};
+use evm::backend::{Apply, ApplyBackend, MemoryAccount, MemoryBackend, MemoryVicinity};
 use evm::executor::stack::{
     MemoryStackState, PrecompileFailure, PrecompileFn, PrecompileOutput, StackExecutor,
     StackSubstateMetadata,
@@ -118,13 +118,12 @@ struct ChainConfig {
     parlia: Option<ParliaConfig>,
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize)]
 struct GenesisAccount {
-    code: Vec<u8>,
-    storage: HashMap<H160, H256>,
-    balance: Option<H256>,
-    nonce: u64,
-    privateKey: Vec<u8>,
+    code: String,
+    storage: BTreeMap<H256, H256>,
+    balance: U256,
+    nonce: U256,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -290,7 +289,7 @@ fn create_extra_data(validators: Vec<H160>) -> Vec<u8> {
     return vec![];
 }
 
-fn invoke_constructor(genesis: Genesis, contract_address: H160, artifact: ArtifactData, contract: Contract, inputs: &[Token]) -> Result<()> {
+fn invoke_constructor(genesis: &mut Genesis, contract_address: H160, artifact: ArtifactData, contract: Contract, inputs: &[Token]) -> Result<()> {
     //println!("artifact: {:?}", artifact);
 
     let ctor = contract.functions.get("ctor").unwrap();
@@ -309,7 +308,7 @@ fn invoke_constructor(genesis: Genesis, contract_address: H160, artifact: Artifa
     Ok(())
 }
 
-fn simulate_system_contract(genesis: Genesis, contract_address: H160, artifact: ArtifactData, constructor: Vec<u8>) -> Result<()> {
+fn simulate_system_contract(genesis: &mut Genesis, contract_address: H160, artifact: ArtifactData, constructor: Vec<u8>) -> Result<()> {
     let state = BTreeMap::new();
     let vicinity = MemoryVicinity {
         gas_price: Default::default(),
@@ -343,14 +342,54 @@ fn simulate_system_contract(genesis: Genesis, contract_address: H160, artifact: 
     let mut constructor = constructor.clone();
     bytecode.append(&mut constructor);
 
-    println!("bytecode = {}", hex::encode(bytecode.clone()));
+    //println!("bytecode = {}", hex::encode(bytecode.clone()));
 
     let reason = executor.transact_create_with_address(H160::zero(),
-                                                        contract_address, U256::zero(),
-                                                        bytecode,
-                                                        u64::MAX,
-                                                        vec![]);
+                                                       contract_address, U256::zero(),
+                                                       bytecode,
+                                                       u64::MAX,
+                                                       vec![]);
     println!("_reason: {:?}", reason);
+
+    let mut account = GenesisAccount {
+        code: String::from(""),
+        storage: Default::default(),
+        balance: U256::zero(),
+        nonce: U256::zero(),
+    };
+
+    let (changes, _) = executor.into_state().deconstruct();
+
+    for apply in changes {
+        match apply {
+            Apply::Modify {
+                address,
+                basic,
+                code,
+                storage,
+                reset_storage,
+            } => {
+                if address == contract_address {
+                    account.balance = basic.balance;
+                    account.nonce = basic.nonce;
+                    if let Some(code) = code {
+                        account.code = "0x".to_owned() + &*hex::encode(code);
+                    }
+
+                    for (index, value) in storage {
+                        account.storage.insert(index, value);
+                    }
+                }
+            }
+            Apply::Delete { address } => {
+                println!("delete: {}", address);
+            }
+        }
+    }
+
+    //println!("account : {:?}", account);
+
+    genesis.alloc.insert(contract_address, account);
 
     Ok(())
 }
@@ -383,11 +422,6 @@ fn create_genesis_config(cfg: GenesisConfig, filename: &str) -> Result<()> {
     println!("initial_stakes = {:?}", initial_stakes);
     println!("initial_stake_total = {:?}", initial_stake_total);
 
-    // invokeConstructorOrPanic(genesis, stakingAddress, stakingRawArtifact, []string{"address[]", "uint256[]", "uint16"}, []interface{}{
-    //     config.Validators,
-    //     initialStakes,
-    //     uint16(config.CommissionRate),
-    // }, silent)
 
     let validators = validators_to_tokens(cfg.validators);
     let mut stakes = vec![];
@@ -395,10 +429,13 @@ fn create_genesis_config(cfg: GenesisConfig, filename: &str) -> Result<()> {
         stakes.push(Token::Uint(stake.clone()));
     }
     let inputs = vec![Token::Array(validators), Token::Array(stakes), Token::Uint(cfg.commission_rate.into())];
-    invoke_constructor(genesis, STAKING_ADDRESS.clone(), Asset::staking_artifact(),
+    invoke_constructor(&mut genesis, STAKING_ADDRESS.clone(), Asset::staking_artifact(),
                        Asset::staking_contract(), inputs.as_slice());
 
-    //Token::Uint(uint.into()
+
+    //Save to file
+    let json = serde_json::to_vec_pretty(&genesis).unwrap();
+    std::fs::write(filename, json)?;
     Ok(())
 }
 
@@ -406,6 +443,6 @@ fn main() {
     //H160::from_str("0x0000000000000000000000000000000000001000");
     //let index_html = Asset::get("Staking.json").unwrap();
     //println!("{:?}", std::str::from_utf8(index_html.as_ref()));
-    create_genesis_config(DEV_NET.clone(), "devnet.json");
+    create_genesis_config(DEV_NET.clone(), "my.json");
     println!("Hello, world!");
 }
