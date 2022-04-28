@@ -339,9 +339,15 @@ fn simulate_system_contract(genesis: Genesis, contract_address: H160, artifact: 
         &precompile,
     );
 
+    let mut bytecode = hex::decode(&artifact.byte_code[2..]).unwrap();
+    let mut constructor = constructor.clone();
+    bytecode.append(&mut constructor);
+
+    println!("bytecode = {}", hex::encode(bytecode.clone()));
+
     let reason = executor.transact_create_with_address(H160::zero(),
                                                         contract_address, U256::zero(),
-                                                        artifact.byte_code.into_bytes(),
+                                                        bytecode,
                                                         u64::MAX,
                                                         vec![]);
     println!("_reason: {:?}", reason);
