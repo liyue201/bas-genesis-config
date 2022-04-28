@@ -2,22 +2,19 @@
 //! # Precompiled components(contracts)
 //!
 
-
 use ethereum_types::H160;
 use evm::executor::stack::PrecompileFn;
 use once_cell::sync::Lazy;
-use ruc::*;
-use std::collections::BTreeMap;
 use ovr_evm_precompile_blake2::Blake2F;
 use ovr_evm_precompile_bn128::{Bn128Add, Bn128Mul, Bn128Pairing};
 use ovr_evm_precompile_curve25519::{Curve25519Add, Curve25519ScalarMul};
 use ovr_evm_precompile_ed25519::Ed25519Verify;
 use ovr_evm_precompile_modexp::Modexp;
 use ovr_evm_precompile_sha3fips::Sha3FIPS256;
-use ovr_evm_precompile_simple::{
-    ECRecover, ECRecoverPublicKey, Identity, Ripemd160, Sha256,
-};
+use ovr_evm_precompile_simple::{ECRecover, ECRecoverPublicKey, Identity, Ripemd160, Sha256};
 use ovr_fp_evm::Precompile;
+use ruc::*;
+use std::collections::BTreeMap;
 
 pub(crate) static PRECOMPILE_SET: Lazy<BTreeMap<H160, PrecompileFn>> = Lazy::new(|| {
     map! {B

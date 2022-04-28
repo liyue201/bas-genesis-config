@@ -1,21 +1,21 @@
 mod precompile;
 
+use anyhow::{anyhow, Result};
+use ethabi::{Contract, Function, Param, ParamType, Token};
 use ethereum_types::{H160, H256, U256};
-use once_cell::sync::Lazy;
-use rust_embed::RustEmbed;
-use serde::{Deserialize, Serialize};
-use std::collections::HashMap;
-use std::ops::Add;
-use std::str::FromStr;
-use std::collections::BTreeMap;
-use anyhow::{Result, anyhow};
-use ethabi::{Function, Param, ParamType, Contract, Token};
 use evm::backend::{Apply, ApplyBackend, MemoryAccount, MemoryBackend, MemoryVicinity};
 use evm::executor::stack::{
     MemoryStackState, PrecompileFailure, PrecompileFn, PrecompileOutput, StackExecutor,
     StackSubstateMetadata,
 };
-use evm::{ExitSucceed, Config};
+use evm::{Config, ExitSucceed};
+use once_cell::sync::Lazy;
+use rust_embed::RustEmbed;
+use serde::{Deserialize, Serialize};
+use std::collections::BTreeMap;
+use std::collections::HashMap;
+use std::ops::Add;
+use std::str::FromStr;
 
 static STAKING_ADDRESS: Lazy<H160> =
     Lazy::new(|| H160::from_str("0x0000000000000000000000000000000000001000").unwrap());
@@ -71,7 +71,6 @@ impl Asset {
         ethabi::Contract::load(data).unwrap()
     }
 }
-
 
 #[derive(Serialize, Deserialize)]
 struct ParliaConfig {
@@ -281,13 +280,18 @@ static DEV_NET: Lazy<GenesisConfig> = Lazy::new(|| GenesisConfig {
     ]),
 });
 
-
 fn create_extra_data(validators: Vec<H160>) -> Vec<u8> {
     //todo:
     return vec![];
 }
 
-fn invoke_constructor(genesis: &mut Genesis, contract_address: H160, artifact: ArtifactData, contract: Contract, inputs: &[Token]) -> Result<()> {
+fn invoke_constructor(
+    genesis: &mut Genesis,
+    contract_address: H160,
+    artifact: ArtifactData,
+    contract: Contract,
+    inputs: &[Token],
+) -> Result<()> {
     //println!("artifact: {:?}", artifact);
 
     let ctor = contract.functions.get("ctor").unwrap();
@@ -306,7 +310,12 @@ fn invoke_constructor(genesis: &mut Genesis, contract_address: H160, artifact: A
     Ok(())
 }
 
-fn simulate_system_contract(genesis: &mut Genesis, contract_address: H160, artifact: ArtifactData, constructor: Vec<u8>) -> Result<()> {
+fn simulate_system_contract(
+    genesis: &mut Genesis,
+    contract_address: H160,
+    artifact: ArtifactData,
+    constructor: Vec<u8>,
+) -> Result<()> {
     let state = BTreeMap::new();
     let vicinity = MemoryVicinity {
         gas_price: Default::default(),
@@ -323,18 +332,13 @@ fn simulate_system_contract(genesis: &mut Genesis, contract_address: H160, artif
     let mut backend = MemoryBackend::new(&vicinity, state.clone());
 
     let mut evm_cfg = Config::istanbul();
-    let metadata =
-        StackSubstateMetadata::new(u64::MAX, &evm_cfg);
+    let metadata = StackSubstateMetadata::new(u64::MAX, &evm_cfg);
 
     let executor_state = MemoryStackState::new(metadata, &backend);
     //et precompile = precompile::JsonPrecompile::precompile(&Istanbul).unwrap();
 
     let precompile = precompile::PRECOMPILE_SET.clone();
-    let mut executor = StackExecutor::new_with_precompiles(
-        executor_state,
-        &evm_cfg,
-        &precompile,
-    );
+    let mut executor = StackExecutor::new_with_precompiles(executor_state, &evm_cfg, &precompile);
 
     let mut bytecode = hex::decode(&artifact.byte_code[2..]).unwrap();
     let mut constructor = constructor.clone();
@@ -342,11 +346,14 @@ fn simulate_system_contract(genesis: &mut Genesis, contract_address: H160, artif
 
     //println!("bytecode = {}", hex::encode(bytecode.clone()));
 
-    let reason = executor.transact_create_with_address(H160::zero(),
-                                                       contract_address, U256::zero(),
-                                                       bytecode,
-                                                       u64::MAX,
-                                                       vec![]);
+    let reason = executor.transact_create_with_address(
+        H160::zero(),
+        contract_address,
+        U256::zero(),
+        bytecode,
+        u64::MAX,
+        vec![],
+    );
     println!("_reason: {:?}", reason);
 
     let mut account = GenesisAccount {
@@ -392,44 +399,50 @@ fn simulate_system_contract(genesis: &mut Genesis, contract_address: H160, artif
     Ok(())
 }
 
-fn validators_to_tokens(validators: Vec<H160>) -> Vec<Token> {
-    let mut tokens = vec![];
-    for &v in &validators {
-        tokens.push(Token::Address(v));
-    }
-    tokens
-}
-
 fn create_genesis_config(cfg: GenesisConfig, filename: &str) -> Result<()> {
     let mut genesis = Genesis::default();
     genesis.config.chain_id = cfg.chain_id;
     genesis.extra_data = create_extra_data(cfg.validators.clone());
-    genesis.config.parlia = Some(ParliaConfig { epoch: cfg.consensus_params.epoch_block_interval, period: 3 });
+    genesis.config.parlia = Some(ParliaConfig {
+        epoch: cfg.consensus_params.epoch_block_interval,
+        period: 3,
+    });
 
     let mut initial_stakes = vec![];
     let mut initial_stake_total: U256 = 0u32.into();
 
     for &v in &cfg.validators {
         let stake = cfg.initial_stakes.get(&v);
-        if stake.is_some() {
-            let stake = stake.unwrap();
+        if let Some(stake) = stake {
             initial_stakes.push(stake);
             initial_stake_total = initial_stake_total.add(stake);
         }
     }
+
     println!("initial_stakes = {:?}", initial_stakes);
     println!("initial_stake_total = {:?}", initial_stake_total);
 
-
-    let validators = validators_to_tokens(cfg.validators);
-    let mut stakes = vec![];
-    for stake in initial_stakes {
-        stakes.push(Token::Uint(stake.clone()));
-    }
-    let inputs = vec![Token::Array(validators), Token::Array(stakes), Token::Uint(cfg.commission_rate.into())];
-    invoke_constructor(&mut genesis, STAKING_ADDRESS.clone(), Asset::staking_artifact(),
-                       Asset::staking_contract(), inputs.as_slice());
-
+    let validators = cfg
+        .validators
+        .into_iter()
+        .map(|v| Token::Address(v))
+        .collect();
+    let stakes = initial_stakes
+        .into_iter()
+        .map(|v| Token::Uint(v.clone()))
+        .collect();
+    let inputs = vec![
+        Token::Array(validators),
+        Token::Array(stakes),
+        Token::Uint(cfg.commission_rate.into()),
+    ];
+    invoke_constructor(
+        &mut genesis,
+        STAKING_ADDRESS.clone(),
+        Asset::staking_artifact(),
+        Asset::staking_contract(),
+        inputs.as_slice(),
+    );
 
     //Save to file
     let json = serde_json::to_vec_pretty(&genesis).unwrap();
