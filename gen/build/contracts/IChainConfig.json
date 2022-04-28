@@ -1,0 +1,2090 @@
+{
+  "contractName": "IChainConfig",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getActiveValidatorsLength",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "newValue",
+          "type": "uint32"
+        }
+      ],
+      "name": "setActiveValidatorsLength",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getEpochBlockInterval",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "newValue",
+          "type": "uint32"
+        }
+      ],
+      "name": "setEpochBlockInterval",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getMisdemeanorThreshold",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "newValue",
+          "type": "uint32"
+        }
+      ],
+      "name": "setMisdemeanorThreshold",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getFelonyThreshold",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "newValue",
+          "type": "uint32"
+        }
+      ],
+      "name": "setFelonyThreshold",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getValidatorJailEpochLength",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "newValue",
+          "type": "uint32"
+        }
+      ],
+      "name": "setValidatorJailEpochLength",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getUndelegatePeriod",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "newValue",
+          "type": "uint32"
+        }
+      ],
+      "name": "setUndelegatePeriod",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getMinValidatorStakeAmount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "newValue",
+          "type": "uint256"
+        }
+      ],
+      "name": "setMinValidatorStakeAmount",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getMinStakingAmount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "newValue",
+          "type": "uint256"
+        }
+      ],
+      "name": "setMinStakingAmount",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.11+commit.d7f03943\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getActiveValidatorsLength\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getEpochBlockInterval\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getFelonyThreshold\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getMinStakingAmount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getMinValidatorStakeAmount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getMisdemeanorThreshold\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getUndelegatePeriod\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getValidatorJailEpochLength\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"newValue\",\"type\":\"uint32\"}],\"name\":\"setActiveValidatorsLength\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"newValue\",\"type\":\"uint32\"}],\"name\":\"setEpochBlockInterval\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"newValue\",\"type\":\"uint32\"}],\"name\":\"setFelonyThreshold\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"newValue\",\"type\":\"uint256\"}],\"name\":\"setMinStakingAmount\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"newValue\",\"type\":\"uint256\"}],\"name\":\"setMinValidatorStakeAmount\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"newValue\",\"type\":\"uint32\"}],\"name\":\"setMisdemeanorThreshold\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"newValue\",\"type\":\"uint32\"}],\"name\":\"setUndelegatePeriod\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"newValue\",\"type\":\"uint32\"}],\"name\":\"setValidatorJailEpochLength\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IChainConfig.sol\":\"IChainConfig\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IChainConfig.sol\":{\"keccak256\":\"0x186881c227c352e908b9531000ff81c8c83168c5c00a2c8d72aea70c57da735d\",\"license\":\"GPL-3.0-only\",\"urls\":[\"bzz-raw://5e3a4bd961aa9d64d8b42bdd4e9e4a11ca2c3cc5145a3e62c0af8089b17b73a4\",\"dweb:/ipfs/QmRnJwYvuQqtuHXvt1D8b52wUxkSUdhfdTrSEjKxBP3Xp3\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: GPL-3.0-only\r\npragma solidity ^0.8.0;\r\n\r\ninterface IChainConfig {\r\n\r\n    function getActiveValidatorsLength() external view returns (uint32);\r\n\r\n    function setActiveValidatorsLength(uint32 newValue) external;\r\n\r\n    function getEpochBlockInterval() external view returns (uint32);\r\n\r\n    function setEpochBlockInterval(uint32 newValue) external;\r\n\r\n    function getMisdemeanorThreshold() external view returns (uint32);\r\n\r\n    function setMisdemeanorThreshold(uint32 newValue) external;\r\n\r\n    function getFelonyThreshold() external view returns (uint32);\r\n\r\n    function setFelonyThreshold(uint32 newValue) external;\r\n\r\n    function getValidatorJailEpochLength() external view returns (uint32);\r\n\r\n    function setValidatorJailEpochLength(uint32 newValue) external;\r\n\r\n    function getUndelegatePeriod() external view returns (uint32);\r\n\r\n    function setUndelegatePeriod(uint32 newValue) external;\r\n\r\n    function getMinValidatorStakeAmount() external view returns (uint256);\r\n\r\n    function setMinValidatorStakeAmount(uint256 newValue) external;\r\n\r\n    function getMinStakingAmount() external view returns (uint256);\r\n\r\n    function setMinStakingAmount(uint256 newValue) external;\r\n}",
+  "sourcePath": "D:\\code\\rust\\bas-genesis-config\\contracts\\interfaces\\IChainConfig.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IChainConfig.sol",
+    "exportedSymbols": {
+      "IChainConfig": [
+        11076
+      ]
+    },
+    "id": 11077,
+    "license": "GPL-3.0-only",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 10995,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "42:23:31"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IChainConfig",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 11076,
+        "linearizedBaseContracts": [
+          11076
+        ],
+        "name": "IChainConfig",
+        "nameLocation": "79:12:31",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "32cc6f08",
+            "id": 11000,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getActiveValidatorsLength",
+            "nameLocation": "110:25:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10996,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "135:2:31"
+            },
+            "returnParameters": {
+              "id": 10999,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10998,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11000,
+                  "src": "161:6:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 10997,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "161:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "160:8:31"
+            },
+            "scope": 11076,
+            "src": "101:68:31",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "c227a412",
+            "id": 11005,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setActiveValidatorsLength",
+            "nameLocation": "186:25:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11003,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11002,
+                  "mutability": "mutable",
+                  "name": "newValue",
+                  "nameLocation": "219:8:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11005,
+                  "src": "212:15:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 11001,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "212:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "211:17:31"
+            },
+            "returnParameters": {
+              "id": 11004,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "237:0:31"
+            },
+            "scope": 11076,
+            "src": "177:61:31",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "346c90a8",
+            "id": 11010,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getEpochBlockInterval",
+            "nameLocation": "255:21:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11006,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "276:2:31"
+            },
+            "returnParameters": {
+              "id": 11009,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11008,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11010,
+                  "src": "302:6:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 11007,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "302:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "301:8:31"
+            },
+            "scope": 11076,
+            "src": "246:64:31",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "af70fa2c",
+            "id": 11015,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setEpochBlockInterval",
+            "nameLocation": "327:21:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11013,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11012,
+                  "mutability": "mutable",
+                  "name": "newValue",
+                  "nameLocation": "356:8:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11015,
+                  "src": "349:15:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 11011,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "349:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "348:17:31"
+            },
+            "returnParameters": {
+              "id": 11014,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "374:0:31"
+            },
+            "scope": 11076,
+            "src": "318:57:31",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "9dbf97db",
+            "id": 11020,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMisdemeanorThreshold",
+            "nameLocation": "392:23:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11016,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "415:2:31"
+            },
+            "returnParameters": {
+              "id": 11019,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11018,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11020,
+                  "src": "441:6:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 11017,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "441:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "440:8:31"
+            },
+            "scope": 11076,
+            "src": "383:66:31",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "d98e3ebf",
+            "id": 11025,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setMisdemeanorThreshold",
+            "nameLocation": "466:23:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11023,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11022,
+                  "mutability": "mutable",
+                  "name": "newValue",
+                  "nameLocation": "497:8:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11025,
+                  "src": "490:15:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 11021,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "490:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "489:17:31"
+            },
+            "returnParameters": {
+              "id": 11024,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "515:0:31"
+            },
+            "scope": 11076,
+            "src": "457:59:31",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "be199738",
+            "id": 11030,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getFelonyThreshold",
+            "nameLocation": "533:18:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11026,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "551:2:31"
+            },
+            "returnParameters": {
+              "id": 11029,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11028,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11030,
+                  "src": "577:6:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 11027,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "577:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "576:8:31"
+            },
+            "scope": 11076,
+            "src": "524:61:31",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "fcd6cb3e",
+            "id": 11035,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setFelonyThreshold",
+            "nameLocation": "602:18:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11033,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11032,
+                  "mutability": "mutable",
+                  "name": "newValue",
+                  "nameLocation": "628:8:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11035,
+                  "src": "621:15:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 11031,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "621:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "620:17:31"
+            },
+            "returnParameters": {
+              "id": 11034,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "646:0:31"
+            },
+            "scope": 11076,
+            "src": "593:54:31",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "6cbe6cd8",
+            "id": 11040,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getValidatorJailEpochLength",
+            "nameLocation": "664:27:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11036,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "691:2:31"
+            },
+            "returnParameters": {
+              "id": 11039,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11038,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11040,
+                  "src": "717:6:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 11037,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "717:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "716:8:31"
+            },
+            "scope": 11076,
+            "src": "655:70:31",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "c8652bd5",
+            "id": 11045,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setValidatorJailEpochLength",
+            "nameLocation": "742:27:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11043,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11042,
+                  "mutability": "mutable",
+                  "name": "newValue",
+                  "nameLocation": "777:8:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11045,
+                  "src": "770:15:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 11041,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "770:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "769:17:31"
+            },
+            "returnParameters": {
+              "id": 11044,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "795:0:31"
+            },
+            "scope": 11076,
+            "src": "733:63:31",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "5e7b72ad",
+            "id": 11050,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getUndelegatePeriod",
+            "nameLocation": "813:19:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11046,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "832:2:31"
+            },
+            "returnParameters": {
+              "id": 11049,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11048,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11050,
+                  "src": "858:6:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 11047,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "858:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "857:8:31"
+            },
+            "scope": 11076,
+            "src": "804:62:31",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "41d8a080",
+            "id": 11055,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setUndelegatePeriod",
+            "nameLocation": "883:19:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11053,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11052,
+                  "mutability": "mutable",
+                  "name": "newValue",
+                  "nameLocation": "910:8:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11055,
+                  "src": "903:15:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 11051,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "903:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "902:17:31"
+            },
+            "returnParameters": {
+              "id": 11054,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "928:0:31"
+            },
+            "scope": 11076,
+            "src": "874:55:31",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "6f856847",
+            "id": 11060,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMinValidatorStakeAmount",
+            "nameLocation": "946:26:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11056,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "972:2:31"
+            },
+            "returnParameters": {
+              "id": 11059,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11058,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11060,
+                  "src": "998:7:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11057,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "998:7:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "997:9:31"
+            },
+            "scope": 11076,
+            "src": "937:70:31",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "e1a2e863",
+            "id": 11065,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setMinValidatorStakeAmount",
+            "nameLocation": "1024:26:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11063,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11062,
+                  "mutability": "mutable",
+                  "name": "newValue",
+                  "nameLocation": "1059:8:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11065,
+                  "src": "1051:16:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11061,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1051:7:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1050:18:31"
+            },
+            "returnParameters": {
+              "id": 11064,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1077:0:31"
+            },
+            "scope": 11076,
+            "src": "1015:63:31",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "eea9a01b",
+            "id": 11070,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMinStakingAmount",
+            "nameLocation": "1095:19:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11066,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1114:2:31"
+            },
+            "returnParameters": {
+              "id": 11069,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11068,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11070,
+                  "src": "1140:7:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11067,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1140:7:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1139:9:31"
+            },
+            "scope": 11076,
+            "src": "1086:63:31",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "612d669e",
+            "id": 11075,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setMinStakingAmount",
+            "nameLocation": "1166:19:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11073,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11072,
+                  "mutability": "mutable",
+                  "name": "newValue",
+                  "nameLocation": "1194:8:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11075,
+                  "src": "1186:16:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11071,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1186:7:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1185:18:31"
+            },
+            "returnParameters": {
+              "id": 11074,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1212:0:31"
+            },
+            "scope": 11076,
+            "src": "1157:56:31",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11077,
+        "src": "69:1147:31",
+        "usedErrors": []
+      }
+    ],
+    "src": "42:1174:31"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/IChainConfig.sol",
+    "exportedSymbols": {
+      "IChainConfig": [
+        11076
+      ]
+    },
+    "id": 11077,
+    "license": "GPL-3.0-only",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 10995,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "42:23:31"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IChainConfig",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 11076,
+        "linearizedBaseContracts": [
+          11076
+        ],
+        "name": "IChainConfig",
+        "nameLocation": "79:12:31",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "32cc6f08",
+            "id": 11000,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getActiveValidatorsLength",
+            "nameLocation": "110:25:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 10996,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "135:2:31"
+            },
+            "returnParameters": {
+              "id": 10999,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10998,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11000,
+                  "src": "161:6:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 10997,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "161:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "160:8:31"
+            },
+            "scope": 11076,
+            "src": "101:68:31",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "c227a412",
+            "id": 11005,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setActiveValidatorsLength",
+            "nameLocation": "186:25:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11003,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11002,
+                  "mutability": "mutable",
+                  "name": "newValue",
+                  "nameLocation": "219:8:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11005,
+                  "src": "212:15:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 11001,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "212:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "211:17:31"
+            },
+            "returnParameters": {
+              "id": 11004,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "237:0:31"
+            },
+            "scope": 11076,
+            "src": "177:61:31",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "346c90a8",
+            "id": 11010,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getEpochBlockInterval",
+            "nameLocation": "255:21:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11006,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "276:2:31"
+            },
+            "returnParameters": {
+              "id": 11009,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11008,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11010,
+                  "src": "302:6:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 11007,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "302:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "301:8:31"
+            },
+            "scope": 11076,
+            "src": "246:64:31",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "af70fa2c",
+            "id": 11015,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setEpochBlockInterval",
+            "nameLocation": "327:21:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11013,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11012,
+                  "mutability": "mutable",
+                  "name": "newValue",
+                  "nameLocation": "356:8:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11015,
+                  "src": "349:15:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 11011,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "349:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "348:17:31"
+            },
+            "returnParameters": {
+              "id": 11014,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "374:0:31"
+            },
+            "scope": 11076,
+            "src": "318:57:31",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "9dbf97db",
+            "id": 11020,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMisdemeanorThreshold",
+            "nameLocation": "392:23:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11016,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "415:2:31"
+            },
+            "returnParameters": {
+              "id": 11019,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11018,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11020,
+                  "src": "441:6:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 11017,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "441:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "440:8:31"
+            },
+            "scope": 11076,
+            "src": "383:66:31",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "d98e3ebf",
+            "id": 11025,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setMisdemeanorThreshold",
+            "nameLocation": "466:23:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11023,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11022,
+                  "mutability": "mutable",
+                  "name": "newValue",
+                  "nameLocation": "497:8:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11025,
+                  "src": "490:15:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 11021,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "490:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "489:17:31"
+            },
+            "returnParameters": {
+              "id": 11024,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "515:0:31"
+            },
+            "scope": 11076,
+            "src": "457:59:31",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "be199738",
+            "id": 11030,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getFelonyThreshold",
+            "nameLocation": "533:18:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11026,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "551:2:31"
+            },
+            "returnParameters": {
+              "id": 11029,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11028,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11030,
+                  "src": "577:6:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 11027,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "577:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "576:8:31"
+            },
+            "scope": 11076,
+            "src": "524:61:31",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "fcd6cb3e",
+            "id": 11035,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setFelonyThreshold",
+            "nameLocation": "602:18:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11033,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11032,
+                  "mutability": "mutable",
+                  "name": "newValue",
+                  "nameLocation": "628:8:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11035,
+                  "src": "621:15:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 11031,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "621:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "620:17:31"
+            },
+            "returnParameters": {
+              "id": 11034,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "646:0:31"
+            },
+            "scope": 11076,
+            "src": "593:54:31",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "6cbe6cd8",
+            "id": 11040,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getValidatorJailEpochLength",
+            "nameLocation": "664:27:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11036,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "691:2:31"
+            },
+            "returnParameters": {
+              "id": 11039,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11038,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11040,
+                  "src": "717:6:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 11037,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "717:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "716:8:31"
+            },
+            "scope": 11076,
+            "src": "655:70:31",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "c8652bd5",
+            "id": 11045,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setValidatorJailEpochLength",
+            "nameLocation": "742:27:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11043,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11042,
+                  "mutability": "mutable",
+                  "name": "newValue",
+                  "nameLocation": "777:8:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11045,
+                  "src": "770:15:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 11041,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "770:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "769:17:31"
+            },
+            "returnParameters": {
+              "id": 11044,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "795:0:31"
+            },
+            "scope": 11076,
+            "src": "733:63:31",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "5e7b72ad",
+            "id": 11050,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getUndelegatePeriod",
+            "nameLocation": "813:19:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11046,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "832:2:31"
+            },
+            "returnParameters": {
+              "id": 11049,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11048,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11050,
+                  "src": "858:6:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 11047,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "858:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "857:8:31"
+            },
+            "scope": 11076,
+            "src": "804:62:31",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "41d8a080",
+            "id": 11055,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setUndelegatePeriod",
+            "nameLocation": "883:19:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11053,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11052,
+                  "mutability": "mutable",
+                  "name": "newValue",
+                  "nameLocation": "910:8:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11055,
+                  "src": "903:15:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 11051,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "903:6:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "902:17:31"
+            },
+            "returnParameters": {
+              "id": 11054,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "928:0:31"
+            },
+            "scope": 11076,
+            "src": "874:55:31",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "6f856847",
+            "id": 11060,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMinValidatorStakeAmount",
+            "nameLocation": "946:26:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11056,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "972:2:31"
+            },
+            "returnParameters": {
+              "id": 11059,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11058,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11060,
+                  "src": "998:7:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11057,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "998:7:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "997:9:31"
+            },
+            "scope": 11076,
+            "src": "937:70:31",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "e1a2e863",
+            "id": 11065,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setMinValidatorStakeAmount",
+            "nameLocation": "1024:26:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11063,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11062,
+                  "mutability": "mutable",
+                  "name": "newValue",
+                  "nameLocation": "1059:8:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11065,
+                  "src": "1051:16:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11061,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1051:7:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1050:18:31"
+            },
+            "returnParameters": {
+              "id": 11064,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1077:0:31"
+            },
+            "scope": 11076,
+            "src": "1015:63:31",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "eea9a01b",
+            "id": 11070,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMinStakingAmount",
+            "nameLocation": "1095:19:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11066,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1114:2:31"
+            },
+            "returnParameters": {
+              "id": 11069,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11068,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11070,
+                  "src": "1140:7:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11067,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1140:7:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1139:9:31"
+            },
+            "scope": 11076,
+            "src": "1086:63:31",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "612d669e",
+            "id": 11075,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setMinStakingAmount",
+            "nameLocation": "1166:19:31",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11073,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11072,
+                  "mutability": "mutable",
+                  "name": "newValue",
+                  "nameLocation": "1194:8:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11075,
+                  "src": "1186:16:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11071,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1186:7:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1185:18:31"
+            },
+            "returnParameters": {
+              "id": 11074,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1212:0:31"
+            },
+            "scope": 11076,
+            "src": "1157:56:31",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11077,
+        "src": "69:1147:31",
+        "usedErrors": []
+      }
+    ],
+    "src": "42:1174:31"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.11+commit.d7f03943.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-04-21T10:08:23.828Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

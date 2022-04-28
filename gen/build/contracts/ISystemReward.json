@@ -1,0 +1,306 @@
+{
+  "contractName": "ISystemReward",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getSystemFee",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "claimSystemFee",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.11+commit.d7f03943\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"claimSystemFee\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getSystemFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/ISystemReward.sol\":\"ISystemReward\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/ISystemReward.sol\":{\"keccak256\":\"0xdaeb96e4a92944e1a7f20b83861e61f93d6c2bb8723350d84037a1030a61c30c\",\"license\":\"GPL-3.0-only\",\"urls\":[\"bzz-raw://1d554653db9efdeb6e2705269a9bb374c6b5f1305022d7f0abccee3eb38272a1\",\"dweb:/ipfs/Qmc1vaXc147vTdR4WnZiSCU9aqDAsmWjpWZZDiyMNwBVNW\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: GPL-3.0-only\r\npragma solidity ^0.8.0;\r\n\r\ninterface ISystemReward {\r\n\r\n    function getSystemFee() external view returns (uint256);\r\n\r\n    function claimSystemFee() external;\r\n}",
+  "sourcePath": "D:\\code\\rust\\bas-genesis-config\\contracts\\interfaces\\ISystemReward.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/ISystemReward.sol",
+    "exportedSymbols": {
+      "ISystemReward": [
+        11529
+      ]
+    },
+    "id": 11530,
+    "license": "GPL-3.0-only",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 11520,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "42:23:40"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ISystemReward",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 11529,
+        "linearizedBaseContracts": [
+          11529
+        ],
+        "name": "ISystemReward",
+        "nameLocation": "79:13:40",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "23056e99",
+            "id": 11525,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSystemFee",
+            "nameLocation": "111:12:40",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11521,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "123:2:40"
+            },
+            "returnParameters": {
+              "id": 11524,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11523,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11525,
+                  "src": "149:7:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11522,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "149:7:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "148:9:40"
+            },
+            "scope": 11529,
+            "src": "102:56:40",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "9ac51fab",
+            "id": 11528,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "claimSystemFee",
+            "nameLocation": "175:14:40",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11526,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "189:2:40"
+            },
+            "returnParameters": {
+              "id": 11527,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "200:0:40"
+            },
+            "scope": 11529,
+            "src": "166:35:40",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11530,
+        "src": "69:135:40",
+        "usedErrors": []
+      }
+    ],
+    "src": "42:162:40"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/ISystemReward.sol",
+    "exportedSymbols": {
+      "ISystemReward": [
+        11529
+      ]
+    },
+    "id": 11530,
+    "license": "GPL-3.0-only",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 11520,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "42:23:40"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ISystemReward",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 11529,
+        "linearizedBaseContracts": [
+          11529
+        ],
+        "name": "ISystemReward",
+        "nameLocation": "79:13:40",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "23056e99",
+            "id": 11525,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSystemFee",
+            "nameLocation": "111:12:40",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11521,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "123:2:40"
+            },
+            "returnParameters": {
+              "id": 11524,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11523,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11525,
+                  "src": "149:7:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11522,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "149:7:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "148:9:40"
+            },
+            "scope": 11529,
+            "src": "102:56:40",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "9ac51fab",
+            "id": 11528,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "claimSystemFee",
+            "nameLocation": "175:14:40",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11526,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "189:2:40"
+            },
+            "returnParameters": {
+              "id": 11527,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "200:0:40"
+            },
+            "scope": 11529,
+            "src": "166:35:40",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11530,
+        "src": "69:135:40",
+        "usedErrors": []
+      }
+    ],
+    "src": "42:162:40"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.11+commit.d7f03943.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-04-21T10:08:23.844Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
