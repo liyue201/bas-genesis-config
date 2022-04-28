@@ -1,0 +1,306 @@
+{
+  "contractName": "IRuntimeUpgradeEvmHook",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "contractAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "byteCode",
+          "type": "bytes"
+        }
+      ],
+      "name": "upgradeTo",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.11+commit.d7f03943\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"contractAddress\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"byteCode\",\"type\":\"bytes\"}],\"name\":\"upgradeTo\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IRuntimeUpgradeEvmHook.sol\":\"IRuntimeUpgradeEvmHook\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IRuntimeUpgradeEvmHook.sol\":{\"keccak256\":\"0x60155ea431280bdfc0cc4fcd19797eea32e5dfd0bc21b31a227a420bb87e3ba2\",\"license\":\"GPL-3.0-only\",\"urls\":[\"bzz-raw://af572f44c99a754e6b9056b57161a5e9e0075ad4e6bca581350bac8b46c394dd\",\"dweb:/ipfs/Qmf4xM7SWH3zuErLrFeamVat3hnVDWQjAyhRJ45RAXrXi4\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: GPL-3.0-only\r\npragma solidity ^0.8.0;\r\n\r\ninterface IRuntimeUpgradeEvmHook {\r\n    function upgradeTo(address contractAddress, bytes calldata byteCode) external;\r\n}",
+  "sourcePath": "D:\\code\\rust\\bas-genesis-config\\contracts\\interfaces\\IRuntimeUpgradeEvmHook.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IRuntimeUpgradeEvmHook.sol",
+    "exportedSymbols": {
+      "IRuntimeUpgradeEvmHook": [
+        11257
+      ]
+    },
+    "id": 11258,
+    "license": "GPL-3.0-only",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 11249,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "42:23:36"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IRuntimeUpgradeEvmHook",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 11257,
+        "linearizedBaseContracts": [
+          11257
+        ],
+        "name": "IRuntimeUpgradeEvmHook",
+        "nameLocation": "79:22:36",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "6fbc15e9",
+            "id": 11256,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "upgradeTo",
+            "nameLocation": "118:9:36",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11254,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11251,
+                  "mutability": "mutable",
+                  "name": "contractAddress",
+                  "nameLocation": "136:15:36",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11256,
+                  "src": "128:23:36",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11250,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "128:7:36",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11253,
+                  "mutability": "mutable",
+                  "name": "byteCode",
+                  "nameLocation": "168:8:36",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11256,
+                  "src": "153:23:36",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 11252,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "153:5:36",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "127:50:36"
+            },
+            "returnParameters": {
+              "id": 11255,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "186:0:36"
+            },
+            "scope": 11257,
+            "src": "109:78:36",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11258,
+        "src": "69:121:36",
+        "usedErrors": []
+      }
+    ],
+    "src": "42:148:36"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/IRuntimeUpgradeEvmHook.sol",
+    "exportedSymbols": {
+      "IRuntimeUpgradeEvmHook": [
+        11257
+      ]
+    },
+    "id": 11258,
+    "license": "GPL-3.0-only",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 11249,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "42:23:36"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IRuntimeUpgradeEvmHook",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 11257,
+        "linearizedBaseContracts": [
+          11257
+        ],
+        "name": "IRuntimeUpgradeEvmHook",
+        "nameLocation": "79:22:36",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "6fbc15e9",
+            "id": 11256,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "upgradeTo",
+            "nameLocation": "118:9:36",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11254,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11251,
+                  "mutability": "mutable",
+                  "name": "contractAddress",
+                  "nameLocation": "136:15:36",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11256,
+                  "src": "128:23:36",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11250,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "128:7:36",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11253,
+                  "mutability": "mutable",
+                  "name": "byteCode",
+                  "nameLocation": "168:8:36",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11256,
+                  "src": "153:23:36",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 11252,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "153:5:36",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "127:50:36"
+            },
+            "returnParameters": {
+              "id": 11255,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "186:0:36"
+            },
+            "scope": 11257,
+            "src": "109:78:36",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11258,
+        "src": "69:121:36",
+        "usedErrors": []
+      }
+    ],
+    "src": "42:148:36"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.11+commit.d7f03943.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-04-21T10:08:23.836Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

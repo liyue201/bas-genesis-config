@@ -1,0 +1,1344 @@
+{
+  "contractName": "IInjector",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "init",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "isInitialized",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getStaking",
+      "outputs": [
+        {
+          "internalType": "contract IStaking",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getSlashingIndicator",
+      "outputs": [
+        {
+          "internalType": "contract ISlashingIndicator",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getSystemReward",
+      "outputs": [
+        {
+          "internalType": "contract ISystemReward",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getStakingPool",
+      "outputs": [
+        {
+          "internalType": "contract IStakingPool",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getGovernance",
+      "outputs": [
+        {
+          "internalType": "contract IGovernance",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getChainConfig",
+      "outputs": [
+        {
+          "internalType": "contract IChainConfig",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.11+commit.d7f03943\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getChainConfig\",\"outputs\":[{\"internalType\":\"contract IChainConfig\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getGovernance\",\"outputs\":[{\"internalType\":\"contract IGovernance\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getSlashingIndicator\",\"outputs\":[{\"internalType\":\"contract ISlashingIndicator\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getStaking\",\"outputs\":[{\"internalType\":\"contract IStaking\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getStakingPool\",\"outputs\":[{\"internalType\":\"contract IStakingPool\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getSystemReward\",\"outputs\":[{\"internalType\":\"contract ISystemReward\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"init\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isInitialized\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IInjector.sol\":\"IInjector\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IChainConfig.sol\":{\"keccak256\":\"0x186881c227c352e908b9531000ff81c8c83168c5c00a2c8d72aea70c57da735d\",\"license\":\"GPL-3.0-only\",\"urls\":[\"bzz-raw://5e3a4bd961aa9d64d8b42bdd4e9e4a11ca2c3cc5145a3e62c0af8089b17b73a4\",\"dweb:/ipfs/QmRnJwYvuQqtuHXvt1D8b52wUxkSUdhfdTrSEjKxBP3Xp3\"]},\"project:/contracts/interfaces/IDeployerProxy.sol\":{\"keccak256\":\"0xce83126e06b4ac7ec7465b99c472568b10d1a9949c8e11629018189e79efd962\",\"license\":\"GPL-3.0-only\",\"urls\":[\"bzz-raw://53c6151834d9e0b8dd84ad25222dc92c39f5827f9aa62022839d1909068111fb\",\"dweb:/ipfs/Qmcow4qrSTtLUiLrp7NnYn66DXePxP7Rw8KXWJ5TVoxPKq\"]},\"project:/contracts/interfaces/IGovernance.sol\":{\"keccak256\":\"0x37c6a45612fafd1eb297f5bc3e36b309bc7326caa7aa513ad38569de0e26db19\",\"license\":\"GPL-3.0-only\",\"urls\":[\"bzz-raw://33cf1bb7fd5cfbd896aeb43f5175b5ff4d8fe01dcfbf85b4cbf9b783838641d6\",\"dweb:/ipfs/QmU4yroYBWJBfTxZnPQnaRthaF68hFFi8vhrHjAkaCEZR4\"]},\"project:/contracts/interfaces/IInjector.sol\":{\"keccak256\":\"0x2806601f01aaecacac3639741cdf5bbd12c9b8273072bc6728138e403892be60\",\"license\":\"GPL-3.0-only\",\"urls\":[\"bzz-raw://ff683131fd3412fa35b2f089877a668b2357f1807993e21223e29a3a20d3f755\",\"dweb:/ipfs/QmNdYXpfyj7pVH5v9YBnovAuTQDdTyn1S9cemQHWCnrbwx\"]},\"project:/contracts/interfaces/ISlashingIndicator.sol\":{\"keccak256\":\"0xf0291f796e6f3e0b02928d45578c0d012ab4659aa5c24928db7b78735761ff96\",\"license\":\"GPL-3.0-only\",\"urls\":[\"bzz-raw://9c257f7c2e37915d07e6d0e3351de248d283de7a88a3c11af8fb09fa32e9e45a\",\"dweb:/ipfs/QmZfmnBttTFCsMSDX3spWYZmy1PNLF43WMEAVQ5K2c4YVp\"]},\"project:/contracts/interfaces/IStaking.sol\":{\"keccak256\":\"0x14dc4ee03d763daf86e0c686abec48b8201092875e29bff668fd8d86bd4ddaf5\",\"license\":\"GPL-3.0-only\",\"urls\":[\"bzz-raw://b3205cae908b6f5d6809638f79f275e4290613e71f9b621c765867f68c99a352\",\"dweb:/ipfs/QmPaoisgDUyAWaR3JAUYpQgBcxyF4MsmBPgpYgPmvgH7hQ\"]},\"project:/contracts/interfaces/IStakingPool.sol\":{\"keccak256\":\"0xb2b25e2b639fd68c77f70e8f33b34c505643634a7ec0991b063ef95a48f85719\",\"license\":\"GPL-3.0-only\",\"urls\":[\"bzz-raw://bf12a0feff306b8aa6a48971ca2102ad3557cf3d2ddd26e7af1290e5c4e5d7ce\",\"dweb:/ipfs/QmY5mqW6WerHqYg8EsmMQ64n9McDLJi9QrKD8UfeQm4WXL\"]},\"project:/contracts/interfaces/ISystemReward.sol\":{\"keccak256\":\"0xdaeb96e4a92944e1a7f20b83861e61f93d6c2bb8723350d84037a1030a61c30c\",\"license\":\"GPL-3.0-only\",\"urls\":[\"bzz-raw://1d554653db9efdeb6e2705269a9bb374c6b5f1305022d7f0abccee3eb38272a1\",\"dweb:/ipfs/Qmc1vaXc147vTdR4WnZiSCU9aqDAsmWjpWZZDiyMNwBVNW\"]},\"project:/contracts/interfaces/IValidatorSet.sol\":{\"keccak256\":\"0xf30bf96602e9598c1aa2d56cff01b1f7ae5056b20bb88aedea59d19cf597ba89\",\"license\":\"GPL-3.0-only\",\"urls\":[\"bzz-raw://d6bf9b6ace03d5f9e4f7c3d6951c1497c2f30c4d2c8677f246b3e644e21d018c\",\"dweb:/ipfs/QmZbPzdNtBKmT3RXF3m5w3pPbCzcwZ7xcQD4Utga5dw9cp\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: GPL-3.0-only\r\npragma solidity ^0.8.0;\r\n\r\nimport \"./ISlashingIndicator.sol\";\r\nimport \"./ISystemReward.sol\";\r\nimport \"./IGovernance.sol\";\r\nimport \"./IStaking.sol\";\r\nimport \"./IDeployerProxy.sol\";\r\nimport \"./IStakingPool.sol\";\r\nimport \"./IChainConfig.sol\";\r\n\r\ninterface IInjector {\r\n\r\n    function init() external;\r\n\r\n    function isInitialized() external view returns (bool);\r\n\r\n    function getStaking() external view returns (IStaking);\r\n\r\n    function getSlashingIndicator() external view returns (ISlashingIndicator);\r\n\r\n    function getSystemReward() external view returns (ISystemReward);\r\n\r\n    function getStakingPool() external view returns (IStakingPool);\r\n\r\n    function getGovernance() external view returns (IGovernance);\r\n\r\n    function getChainConfig() external view returns (IChainConfig);\r\n}",
+  "sourcePath": "D:\\code\\rust\\bas-genesis-config\\contracts\\interfaces\\IInjector.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IInjector.sol",
+    "exportedSymbols": {
+      "IChainConfig": [
+        11076
+      ],
+      "IDeployerProxy": [
+        11146
+      ],
+      "IGovernance": [
+        11161
+      ],
+      "IInjector": [
+        11215
+      ],
+      "ISlashingIndicator": [
+        11265
+      ],
+      "IStaking": [
+        11480
+      ],
+      "IStakingPool": [
+        11518
+      ],
+      "ISystemReward": [
+        11529
+      ],
+      "IValidatorSet": [
+        11543
+      ]
+    },
+    "id": 11216,
+    "license": "GPL-3.0-only",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 11163,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "42:23:34"
+      },
+      {
+        "absolutePath": "project:/contracts/interfaces/ISlashingIndicator.sol",
+        "file": "./ISlashingIndicator.sol",
+        "id": 11164,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 11216,
+        "sourceUnit": 11266,
+        "src": "69:34:34",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/interfaces/ISystemReward.sol",
+        "file": "./ISystemReward.sol",
+        "id": 11165,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 11216,
+        "sourceUnit": 11530,
+        "src": "105:29:34",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/interfaces/IGovernance.sol",
+        "file": "./IGovernance.sol",
+        "id": 11166,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 11216,
+        "sourceUnit": 11162,
+        "src": "136:27:34",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/interfaces/IStaking.sol",
+        "file": "./IStaking.sol",
+        "id": 11167,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 11216,
+        "sourceUnit": 11481,
+        "src": "165:24:34",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/interfaces/IDeployerProxy.sol",
+        "file": "./IDeployerProxy.sol",
+        "id": 11168,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 11216,
+        "sourceUnit": 11147,
+        "src": "191:30:34",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/interfaces/IStakingPool.sol",
+        "file": "./IStakingPool.sol",
+        "id": 11169,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 11216,
+        "sourceUnit": 11519,
+        "src": "223:28:34",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/interfaces/IChainConfig.sol",
+        "file": "./IChainConfig.sol",
+        "id": 11170,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 11216,
+        "sourceUnit": 11077,
+        "src": "253:28:34",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IInjector",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 11215,
+        "linearizedBaseContracts": [
+          11215
+        ],
+        "name": "IInjector",
+        "nameLocation": "295:9:34",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "e1c7392a",
+            "id": 11173,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "init",
+            "nameLocation": "323:4:34",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11171,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "327:2:34"
+            },
+            "returnParameters": {
+              "id": 11172,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "338:0:34"
+            },
+            "scope": 11215,
+            "src": "314:25:34",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "392e53cd",
+            "id": 11178,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isInitialized",
+            "nameLocation": "356:13:34",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11174,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "369:2:34"
+            },
+            "returnParameters": {
+              "id": 11177,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11176,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11178,
+                  "src": "395:4:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11175,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "395:4:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "394:6:34"
+            },
+            "scope": 11215,
+            "src": "347:54:34",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "7b1391a6",
+            "id": 11184,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getStaking",
+            "nameLocation": "418:10:34",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11179,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "428:2:34"
+            },
+            "returnParameters": {
+              "id": 11183,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11182,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11184,
+                  "src": "454:8:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IStaking_$11480",
+                    "typeString": "contract IStaking"
+                  },
+                  "typeName": {
+                    "id": 11181,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 11180,
+                      "name": "IStaking",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 11480,
+                      "src": "454:8:34"
+                    },
+                    "referencedDeclaration": 11480,
+                    "src": "454:8:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IStaking_$11480",
+                      "typeString": "contract IStaking"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "453:10:34"
+            },
+            "scope": 11215,
+            "src": "409:55:34",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "244d8257",
+            "id": 11190,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSlashingIndicator",
+            "nameLocation": "481:20:34",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11185,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "501:2:34"
+            },
+            "returnParameters": {
+              "id": 11189,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11188,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11190,
+                  "src": "527:18:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISlashingIndicator_$11265",
+                    "typeString": "contract ISlashingIndicator"
+                  },
+                  "typeName": {
+                    "id": 11187,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 11186,
+                      "name": "ISlashingIndicator",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 11265,
+                      "src": "527:18:34"
+                    },
+                    "referencedDeclaration": 11265,
+                    "src": "527:18:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISlashingIndicator_$11265",
+                      "typeString": "contract ISlashingIndicator"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "526:20:34"
+            },
+            "scope": 11215,
+            "src": "472:75:34",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "7a37cc59",
+            "id": 11196,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSystemReward",
+            "nameLocation": "564:15:34",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11191,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "579:2:34"
+            },
+            "returnParameters": {
+              "id": 11195,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11194,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11196,
+                  "src": "605:13:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISystemReward_$11529",
+                    "typeString": "contract ISystemReward"
+                  },
+                  "typeName": {
+                    "id": 11193,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 11192,
+                      "name": "ISystemReward",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 11529,
+                      "src": "605:13:34"
+                    },
+                    "referencedDeclaration": 11529,
+                    "src": "605:13:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISystemReward_$11529",
+                      "typeString": "contract ISystemReward"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "604:15:34"
+            },
+            "scope": 11215,
+            "src": "555:65:34",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "45946334",
+            "id": 11202,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getStakingPool",
+            "nameLocation": "637:14:34",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11197,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "651:2:34"
+            },
+            "returnParameters": {
+              "id": 11201,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11200,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11202,
+                  "src": "677:12:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IStakingPool_$11518",
+                    "typeString": "contract IStakingPool"
+                  },
+                  "typeName": {
+                    "id": 11199,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 11198,
+                      "name": "IStakingPool",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 11518,
+                      "src": "677:12:34"
+                    },
+                    "referencedDeclaration": 11518,
+                    "src": "677:12:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IStakingPool_$11518",
+                      "typeString": "contract IStakingPool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "676:14:34"
+            },
+            "scope": 11215,
+            "src": "628:63:34",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "289b3c0d",
+            "id": 11208,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getGovernance",
+            "nameLocation": "708:13:34",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11203,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "721:2:34"
+            },
+            "returnParameters": {
+              "id": 11207,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11206,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11208,
+                  "src": "747:11:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IGovernance_$11161",
+                    "typeString": "contract IGovernance"
+                  },
+                  "typeName": {
+                    "id": 11205,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 11204,
+                      "name": "IGovernance",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 11161,
+                      "src": "747:11:34"
+                    },
+                    "referencedDeclaration": 11161,
+                    "src": "747:11:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IGovernance_$11161",
+                      "typeString": "contract IGovernance"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "746:13:34"
+            },
+            "scope": 11215,
+            "src": "699:61:34",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "606c0c94",
+            "id": 11214,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getChainConfig",
+            "nameLocation": "777:14:34",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11209,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "791:2:34"
+            },
+            "returnParameters": {
+              "id": 11213,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11212,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11214,
+                  "src": "817:12:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IChainConfig_$11076",
+                    "typeString": "contract IChainConfig"
+                  },
+                  "typeName": {
+                    "id": 11211,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 11210,
+                      "name": "IChainConfig",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 11076,
+                      "src": "817:12:34"
+                    },
+                    "referencedDeclaration": 11076,
+                    "src": "817:12:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IChainConfig_$11076",
+                      "typeString": "contract IChainConfig"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "816:14:34"
+            },
+            "scope": 11215,
+            "src": "768:63:34",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11216,
+        "src": "285:549:34",
+        "usedErrors": []
+      }
+    ],
+    "src": "42:792:34"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/IInjector.sol",
+    "exportedSymbols": {
+      "IChainConfig": [
+        11076
+      ],
+      "IDeployerProxy": [
+        11146
+      ],
+      "IGovernance": [
+        11161
+      ],
+      "IInjector": [
+        11215
+      ],
+      "ISlashingIndicator": [
+        11265
+      ],
+      "IStaking": [
+        11480
+      ],
+      "IStakingPool": [
+        11518
+      ],
+      "ISystemReward": [
+        11529
+      ],
+      "IValidatorSet": [
+        11543
+      ]
+    },
+    "id": 11216,
+    "license": "GPL-3.0-only",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 11163,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "42:23:34"
+      },
+      {
+        "absolutePath": "project:/contracts/interfaces/ISlashingIndicator.sol",
+        "file": "./ISlashingIndicator.sol",
+        "id": 11164,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 11216,
+        "sourceUnit": 11266,
+        "src": "69:34:34",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/interfaces/ISystemReward.sol",
+        "file": "./ISystemReward.sol",
+        "id": 11165,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 11216,
+        "sourceUnit": 11530,
+        "src": "105:29:34",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/interfaces/IGovernance.sol",
+        "file": "./IGovernance.sol",
+        "id": 11166,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 11216,
+        "sourceUnit": 11162,
+        "src": "136:27:34",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/interfaces/IStaking.sol",
+        "file": "./IStaking.sol",
+        "id": 11167,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 11216,
+        "sourceUnit": 11481,
+        "src": "165:24:34",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/interfaces/IDeployerProxy.sol",
+        "file": "./IDeployerProxy.sol",
+        "id": 11168,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 11216,
+        "sourceUnit": 11147,
+        "src": "191:30:34",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/interfaces/IStakingPool.sol",
+        "file": "./IStakingPool.sol",
+        "id": 11169,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 11216,
+        "sourceUnit": 11519,
+        "src": "223:28:34",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/interfaces/IChainConfig.sol",
+        "file": "./IChainConfig.sol",
+        "id": 11170,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 11216,
+        "sourceUnit": 11077,
+        "src": "253:28:34",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IInjector",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 11215,
+        "linearizedBaseContracts": [
+          11215
+        ],
+        "name": "IInjector",
+        "nameLocation": "295:9:34",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "e1c7392a",
+            "id": 11173,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "init",
+            "nameLocation": "323:4:34",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11171,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "327:2:34"
+            },
+            "returnParameters": {
+              "id": 11172,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "338:0:34"
+            },
+            "scope": 11215,
+            "src": "314:25:34",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "392e53cd",
+            "id": 11178,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isInitialized",
+            "nameLocation": "356:13:34",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11174,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "369:2:34"
+            },
+            "returnParameters": {
+              "id": 11177,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11176,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11178,
+                  "src": "395:4:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 11175,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "395:4:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "394:6:34"
+            },
+            "scope": 11215,
+            "src": "347:54:34",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "7b1391a6",
+            "id": 11184,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getStaking",
+            "nameLocation": "418:10:34",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11179,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "428:2:34"
+            },
+            "returnParameters": {
+              "id": 11183,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11182,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11184,
+                  "src": "454:8:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IStaking_$11480",
+                    "typeString": "contract IStaking"
+                  },
+                  "typeName": {
+                    "id": 11181,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 11180,
+                      "name": "IStaking",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 11480,
+                      "src": "454:8:34"
+                    },
+                    "referencedDeclaration": 11480,
+                    "src": "454:8:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IStaking_$11480",
+                      "typeString": "contract IStaking"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "453:10:34"
+            },
+            "scope": 11215,
+            "src": "409:55:34",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "244d8257",
+            "id": 11190,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSlashingIndicator",
+            "nameLocation": "481:20:34",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11185,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "501:2:34"
+            },
+            "returnParameters": {
+              "id": 11189,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11188,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11190,
+                  "src": "527:18:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISlashingIndicator_$11265",
+                    "typeString": "contract ISlashingIndicator"
+                  },
+                  "typeName": {
+                    "id": 11187,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 11186,
+                      "name": "ISlashingIndicator",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 11265,
+                      "src": "527:18:34"
+                    },
+                    "referencedDeclaration": 11265,
+                    "src": "527:18:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISlashingIndicator_$11265",
+                      "typeString": "contract ISlashingIndicator"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "526:20:34"
+            },
+            "scope": 11215,
+            "src": "472:75:34",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "7a37cc59",
+            "id": 11196,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSystemReward",
+            "nameLocation": "564:15:34",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11191,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "579:2:34"
+            },
+            "returnParameters": {
+              "id": 11195,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11194,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11196,
+                  "src": "605:13:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISystemReward_$11529",
+                    "typeString": "contract ISystemReward"
+                  },
+                  "typeName": {
+                    "id": 11193,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 11192,
+                      "name": "ISystemReward",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 11529,
+                      "src": "605:13:34"
+                    },
+                    "referencedDeclaration": 11529,
+                    "src": "605:13:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISystemReward_$11529",
+                      "typeString": "contract ISystemReward"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "604:15:34"
+            },
+            "scope": 11215,
+            "src": "555:65:34",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "45946334",
+            "id": 11202,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getStakingPool",
+            "nameLocation": "637:14:34",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11197,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "651:2:34"
+            },
+            "returnParameters": {
+              "id": 11201,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11200,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11202,
+                  "src": "677:12:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IStakingPool_$11518",
+                    "typeString": "contract IStakingPool"
+                  },
+                  "typeName": {
+                    "id": 11199,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 11198,
+                      "name": "IStakingPool",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 11518,
+                      "src": "677:12:34"
+                    },
+                    "referencedDeclaration": 11518,
+                    "src": "677:12:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IStakingPool_$11518",
+                      "typeString": "contract IStakingPool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "676:14:34"
+            },
+            "scope": 11215,
+            "src": "628:63:34",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "289b3c0d",
+            "id": 11208,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getGovernance",
+            "nameLocation": "708:13:34",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11203,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "721:2:34"
+            },
+            "returnParameters": {
+              "id": 11207,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11206,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11208,
+                  "src": "747:11:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IGovernance_$11161",
+                    "typeString": "contract IGovernance"
+                  },
+                  "typeName": {
+                    "id": 11205,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 11204,
+                      "name": "IGovernance",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 11161,
+                      "src": "747:11:34"
+                    },
+                    "referencedDeclaration": 11161,
+                    "src": "747:11:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IGovernance_$11161",
+                      "typeString": "contract IGovernance"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "746:13:34"
+            },
+            "scope": 11215,
+            "src": "699:61:34",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "606c0c94",
+            "id": 11214,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getChainConfig",
+            "nameLocation": "777:14:34",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11209,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "791:2:34"
+            },
+            "returnParameters": {
+              "id": 11213,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11212,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11214,
+                  "src": "817:12:34",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IChainConfig_$11076",
+                    "typeString": "contract IChainConfig"
+                  },
+                  "typeName": {
+                    "id": 11211,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 11210,
+                      "name": "IChainConfig",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 11076,
+                      "src": "817:12:34"
+                    },
+                    "referencedDeclaration": 11076,
+                    "src": "817:12:34",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IChainConfig_$11076",
+                      "typeString": "contract IChainConfig"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "816:14:34"
+            },
+            "scope": 11215,
+            "src": "768:63:34",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11216,
+        "src": "285:549:34",
+        "usedErrors": []
+      }
+    ],
+    "src": "42:792:34"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.11+commit.d7f03943.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-04-21T10:08:23.833Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

@@ -1,0 +1,432 @@
+{
+  "contractName": "IGovernance",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getVotingSupply",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "validator",
+          "type": "address"
+        }
+      ],
+      "name": "getVotingPower",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.11+commit.d7f03943\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"}],\"name\":\"getVotingPower\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getVotingSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IGovernance.sol\":\"IGovernance\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IGovernance.sol\":{\"keccak256\":\"0x37c6a45612fafd1eb297f5bc3e36b309bc7326caa7aa513ad38569de0e26db19\",\"license\":\"GPL-3.0-only\",\"urls\":[\"bzz-raw://33cf1bb7fd5cfbd896aeb43f5175b5ff4d8fe01dcfbf85b4cbf9b783838641d6\",\"dweb:/ipfs/QmU4yroYBWJBfTxZnPQnaRthaF68hFFi8vhrHjAkaCEZR4\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: GPL-3.0-only\r\npragma solidity ^0.8.0;\r\n\r\ninterface IGovernance {\r\n\r\n    function getVotingSupply() external view returns (uint256);\r\n\r\n    function getVotingPower(address validator) external view returns (uint256);\r\n}\r\n",
+  "sourcePath": "D:\\code\\rust\\bas-genesis-config\\contracts\\interfaces\\IGovernance.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IGovernance.sol",
+    "exportedSymbols": {
+      "IGovernance": [
+        11161
+      ]
+    },
+    "id": 11162,
+    "license": "GPL-3.0-only",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 11148,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "42:23:33"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IGovernance",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 11161,
+        "linearizedBaseContracts": [
+          11161
+        ],
+        "name": "IGovernance",
+        "nameLocation": "79:11:33",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "59fe2ccf",
+            "id": 11153,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getVotingSupply",
+            "nameLocation": "109:15:33",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11149,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "124:2:33"
+            },
+            "returnParameters": {
+              "id": 11152,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11151,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11153,
+                  "src": "150:7:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11150,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "150:7:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "149:9:33"
+            },
+            "scope": 11161,
+            "src": "100:59:33",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "bb4d4436",
+            "id": 11160,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getVotingPower",
+            "nameLocation": "176:14:33",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11156,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11155,
+                  "mutability": "mutable",
+                  "name": "validator",
+                  "nameLocation": "199:9:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11160,
+                  "src": "191:17:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11154,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "191:7:33",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "190:19:33"
+            },
+            "returnParameters": {
+              "id": 11159,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11158,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11160,
+                  "src": "233:7:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11157,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "233:7:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "232:9:33"
+            },
+            "scope": 11161,
+            "src": "167:75:33",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11162,
+        "src": "69:176:33",
+        "usedErrors": []
+      }
+    ],
+    "src": "42:205:33"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/IGovernance.sol",
+    "exportedSymbols": {
+      "IGovernance": [
+        11161
+      ]
+    },
+    "id": 11162,
+    "license": "GPL-3.0-only",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 11148,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "42:23:33"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IGovernance",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 11161,
+        "linearizedBaseContracts": [
+          11161
+        ],
+        "name": "IGovernance",
+        "nameLocation": "79:11:33",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "59fe2ccf",
+            "id": 11153,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getVotingSupply",
+            "nameLocation": "109:15:33",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11149,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "124:2:33"
+            },
+            "returnParameters": {
+              "id": 11152,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11151,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11153,
+                  "src": "150:7:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11150,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "150:7:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "149:9:33"
+            },
+            "scope": 11161,
+            "src": "100:59:33",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "bb4d4436",
+            "id": 11160,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getVotingPower",
+            "nameLocation": "176:14:33",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11156,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11155,
+                  "mutability": "mutable",
+                  "name": "validator",
+                  "nameLocation": "199:9:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11160,
+                  "src": "191:17:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11154,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "191:7:33",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "190:19:33"
+            },
+            "returnParameters": {
+              "id": 11159,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11158,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11160,
+                  "src": "233:7:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11157,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "233:7:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "232:9:33"
+            },
+            "scope": 11161,
+            "src": "167:75:33",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11162,
+        "src": "69:176:33",
+        "usedErrors": []
+      }
+    ],
+    "src": "42:205:33"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.11+commit.d7f03943.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-04-21T10:08:23.832Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

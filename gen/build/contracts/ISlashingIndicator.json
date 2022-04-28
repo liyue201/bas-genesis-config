@@ -1,0 +1,247 @@
+{
+  "contractName": "ISlashingIndicator",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "validator",
+          "type": "address"
+        }
+      ],
+      "name": "slash",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.11+commit.d7f03943\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"}],\"name\":\"slash\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/ISlashingIndicator.sol\":\"ISlashingIndicator\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/ISlashingIndicator.sol\":{\"keccak256\":\"0xf0291f796e6f3e0b02928d45578c0d012ab4659aa5c24928db7b78735761ff96\",\"license\":\"GPL-3.0-only\",\"urls\":[\"bzz-raw://9c257f7c2e37915d07e6d0e3351de248d283de7a88a3c11af8fb09fa32e9e45a\",\"dweb:/ipfs/QmZfmnBttTFCsMSDX3spWYZmy1PNLF43WMEAVQ5K2c4YVp\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: GPL-3.0-only\r\npragma solidity ^0.8.0;\r\n\r\ninterface ISlashingIndicator {\r\n\r\n    function slash(address validator) external;\r\n}",
+  "sourcePath": "D:\\code\\rust\\bas-genesis-config\\contracts\\interfaces\\ISlashingIndicator.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/ISlashingIndicator.sol",
+    "exportedSymbols": {
+      "ISlashingIndicator": [
+        11265
+      ]
+    },
+    "id": 11266,
+    "license": "GPL-3.0-only",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 11259,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "42:23:37"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ISlashingIndicator",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 11265,
+        "linearizedBaseContracts": [
+          11265
+        ],
+        "name": "ISlashingIndicator",
+        "nameLocation": "79:18:37",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "c96be4cb",
+            "id": 11264,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "slash",
+            "nameLocation": "116:5:37",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11262,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11261,
+                  "mutability": "mutable",
+                  "name": "validator",
+                  "nameLocation": "130:9:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11264,
+                  "src": "122:17:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11260,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "122:7:37",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "121:19:37"
+            },
+            "returnParameters": {
+              "id": 11263,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "149:0:37"
+            },
+            "scope": 11265,
+            "src": "107:43:37",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11266,
+        "src": "69:84:37",
+        "usedErrors": []
+      }
+    ],
+    "src": "42:111:37"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/ISlashingIndicator.sol",
+    "exportedSymbols": {
+      "ISlashingIndicator": [
+        11265
+      ]
+    },
+    "id": 11266,
+    "license": "GPL-3.0-only",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 11259,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "42:23:37"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ISlashingIndicator",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 11265,
+        "linearizedBaseContracts": [
+          11265
+        ],
+        "name": "ISlashingIndicator",
+        "nameLocation": "79:18:37",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "c96be4cb",
+            "id": 11264,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "slash",
+            "nameLocation": "116:5:37",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11262,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11261,
+                  "mutability": "mutable",
+                  "name": "validator",
+                  "nameLocation": "130:9:37",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11264,
+                  "src": "122:17:37",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11260,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "122:7:37",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "121:19:37"
+            },
+            "returnParameters": {
+              "id": 11263,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "149:0:37"
+            },
+            "scope": 11265,
+            "src": "107:43:37",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11266,
+        "src": "69:84:37",
+        "usedErrors": []
+      }
+    ],
+    "src": "42:111:37"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.11+commit.d7f03943.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-04-21T10:08:23.836Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

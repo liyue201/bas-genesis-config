@@ -1,6 +1,5 @@
 mod precompile;
 
-use ethjson::spec::ForkSpec;
 use ethereum_types::{H160, H256, U256};
 use once_cell::sync::Lazy;
 use rust_embed::RustEmbed;
@@ -11,13 +10,12 @@ use std::str::FromStr;
 use std::collections::BTreeMap;
 use anyhow::{Result, anyhow};
 use ethabi::{Function, Param, ParamType, Contract, Token};
-use ethjson::spec::spec::ForkSpec::Istanbul;
 use evm::backend::{Apply, ApplyBackend, MemoryAccount, MemoryBackend, MemoryVicinity};
 use evm::executor::stack::{
     MemoryStackState, PrecompileFailure, PrecompileFn, PrecompileOutput, StackExecutor,
     StackSubstateMetadata,
 };
-use evm::{Config, Context, ExitError, ExitSucceed};
+use evm::{ExitSucceed, Config};
 
 static STAKING_ADDRESS: Lazy<H160> =
     Lazy::new(|| H160::from_str("0x0000000000000000000000000000000000001000").unwrap());
@@ -328,10 +326,10 @@ fn simulate_system_contract(genesis: &mut Genesis, contract_address: H160, artif
     let metadata =
         StackSubstateMetadata::new(u64::MAX, &evm_cfg);
 
-
     let executor_state = MemoryStackState::new(metadata, &backend);
-    let precompile = precompile::JsonPrecompile::precompile(&Istanbul).unwrap();
+    //et precompile = precompile::JsonPrecompile::precompile(&Istanbul).unwrap();
 
+    let precompile = precompile::PRECOMPILE_SET.clone();
     let mut executor = StackExecutor::new_with_precompiles(
         executor_state,
         &evm_cfg,

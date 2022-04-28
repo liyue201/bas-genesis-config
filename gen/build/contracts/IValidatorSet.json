@@ -1,0 +1,390 @@
+{
+  "contractName": "IValidatorSet",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getValidators",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "validator",
+          "type": "address"
+        }
+      ],
+      "name": "deposit",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.11+commit.d7f03943\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"validator\",\"type\":\"address\"}],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getValidators\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IValidatorSet.sol\":\"IValidatorSet\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IValidatorSet.sol\":{\"keccak256\":\"0xf30bf96602e9598c1aa2d56cff01b1f7ae5056b20bb88aedea59d19cf597ba89\",\"license\":\"GPL-3.0-only\",\"urls\":[\"bzz-raw://d6bf9b6ace03d5f9e4f7c3d6951c1497c2f30c4d2c8677f246b3e644e21d018c\",\"dweb:/ipfs/QmZbPzdNtBKmT3RXF3m5w3pPbCzcwZ7xcQD4Utga5dw9cp\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: GPL-3.0-only\r\npragma solidity ^0.8.0;\r\n\r\ninterface IValidatorSet {\r\n\r\n    function getValidators() external view returns (address[] memory);\r\n\r\n    function deposit(address validator) external payable;\r\n}",
+  "sourcePath": "D:\\code\\rust\\bas-genesis-config\\contracts\\interfaces\\IValidatorSet.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IValidatorSet.sol",
+    "exportedSymbols": {
+      "IValidatorSet": [
+        11543
+      ]
+    },
+    "id": 11544,
+    "license": "GPL-3.0-only",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 11531,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "42:23:41"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IValidatorSet",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 11543,
+        "linearizedBaseContracts": [
+          11543
+        ],
+        "name": "IValidatorSet",
+        "nameLocation": "79:13:41",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "b7ab4db5",
+            "id": 11537,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getValidators",
+            "nameLocation": "111:13:41",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11532,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "124:2:41"
+            },
+            "returnParameters": {
+              "id": 11536,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11535,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11537,
+                  "src": "150:16:41",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 11533,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "150:7:41",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 11534,
+                    "nodeType": "ArrayTypeName",
+                    "src": "150:9:41",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "149:18:41"
+            },
+            "scope": 11543,
+            "src": "102:66:41",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "f340fa01",
+            "id": 11542,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nameLocation": "185:7:41",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11540,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11539,
+                  "mutability": "mutable",
+                  "name": "validator",
+                  "nameLocation": "201:9:41",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11542,
+                  "src": "193:17:41",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11538,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "193:7:41",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "192:19:41"
+            },
+            "returnParameters": {
+              "id": 11541,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "228:0:41"
+            },
+            "scope": 11543,
+            "src": "176:53:41",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11544,
+        "src": "69:163:41",
+        "usedErrors": []
+      }
+    ],
+    "src": "42:190:41"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/IValidatorSet.sol",
+    "exportedSymbols": {
+      "IValidatorSet": [
+        11543
+      ]
+    },
+    "id": 11544,
+    "license": "GPL-3.0-only",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 11531,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "42:23:41"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IValidatorSet",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 11543,
+        "linearizedBaseContracts": [
+          11543
+        ],
+        "name": "IValidatorSet",
+        "nameLocation": "79:13:41",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "b7ab4db5",
+            "id": 11537,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getValidators",
+            "nameLocation": "111:13:41",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11532,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "124:2:41"
+            },
+            "returnParameters": {
+              "id": 11536,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11535,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11537,
+                  "src": "150:16:41",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 11533,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "150:7:41",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 11534,
+                    "nodeType": "ArrayTypeName",
+                    "src": "150:9:41",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "149:18:41"
+            },
+            "scope": 11543,
+            "src": "102:66:41",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "f340fa01",
+            "id": 11542,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nameLocation": "185:7:41",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11540,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11539,
+                  "mutability": "mutable",
+                  "name": "validator",
+                  "nameLocation": "201:9:41",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11542,
+                  "src": "193:17:41",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11538,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "193:7:41",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "192:19:41"
+            },
+            "returnParameters": {
+              "id": 11541,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "228:0:41"
+            },
+            "scope": 11543,
+            "src": "176:53:41",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11544,
+        "src": "69:163:41",
+        "usedErrors": []
+      }
+    ],
+    "src": "42:190:41"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.11+commit.d7f03943.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-04-21T10:08:23.844Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

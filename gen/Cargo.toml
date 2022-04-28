@@ -6,17 +6,16 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+ruc = { version = "1.0.7", features = ["cmd"] }
 once_cell = "1.10.0"
 #evm = { version = "0.35.0", default-features = false, features = ["with-serde"] }
 evm = { git = "https://github.com/liyue201/evm", rev = "3e739c82cdada8108d145841759964e39af1d279", default-features = false, features = ["with-serde"] }
+
 ethereum = { version = "0.12.0", default-features = false, features = ["with-serde"] }
 ethereum-types = "0.13.1"
 primitive-types = "0.11"
 web3 = "0.17.0"
 ethabi = "17.0.0"
-#eth-utils = { git = "https://github.com/haxjump/eth-utils", rev = "7fc474e57f5dd9c77ce2a9b3ac3104fe8cf63149", features = ["with_common_precompiles"] }
-ethjson = { path = "../ethjson", features = ["test-helpers"] }
-ethcore-builtin = { path = "../ethcore-builtin" }
 lazy_static = "1.4.0"
 sha3 = { version = "0.10", default-features = false }
 rlp = { version = "0.5", default-features = false }
@@ -31,3 +30,21 @@ hex = "0.4"
 clap = "2.32"
 libsecp256k1 = "0.7"
 parity-bytes = "0.1"
+
+#ovr-evm-precompile-blake2 = { path = "../../fr2/frame/evm/precompile/blake2"}
+#ovr-evm-precompile-bn128 =  { path = "../../fr2/frame/evm/precompile/bn128"}
+#ovr-evm-precompile-curve25519 = { path = "../../fr2/frame/evm/precompile/curve25519"}
+#ovr-evm-precompile-ed25519 = { path = "../../fr2/frame/evm/precompile/ed25519"}
+#ovr-evm-precompile-modexp =  { path = "../../fr2/frame/evm/precompile/modexp"}
+#ovr-evm-precompile-sha3fips ={ path = "../../fr2/frame/evm/precompile/sha3fips"}
+#ovr-evm-precompile-simple = { path = "../../fr2/frame/evm/precompile/simple"}
+#ovr-fp-evm =  { path = "../../fr2/primitives/evm"}
+
+ovr-evm-precompile-blake2 = { git = "https://github.com/liyue201/evm-precompiles", rev = "4acd14d0dc46be335ab0e9f989340e5983fa2d88" }
+ovr-evm-precompile-bn128 = { git = "https://github.com/liyue201/evm-precompiles", rev = "4acd14d0dc46be335ab0e9f989340e5983fa2d88" }
+ovr-evm-precompile-curve25519 = { git = "https://github.com/liyue201/evm-precompiles", rev = "4acd14d0dc46be335ab0e9f989340e5983fa2d88" }
+ovr-evm-precompile-ed25519 = { git = "https://github.com/liyue201/evm-precompiles", rev = "4acd14d0dc46be335ab0e9f989340e5983fa2d88" }
+ovr-evm-precompile-modexp = { git = "https://github.com/liyue201/evm-precompiles", rev = "4acd14d0dc46be335ab0e9f989340e5983fa2d88" }
+ovr-evm-precompile-sha3fips = { git = "https://github.com/liyue201/evm-precompiles", rev = "4acd14d0dc46be335ab0e9f989340e5983fa2d88" }
+ovr-evm-precompile-simple = { git = "https://github.com/liyue201/evm-precompiles", rev = "4acd14d0dc46be335ab0e9f989340e5983fa2d88" }
+ovr-fp-evm = { git = "https://github.com/liyue201/evm-precompiles", rev = "4acd14d0dc46be335ab0e9f989340e5983fa2d88" }
